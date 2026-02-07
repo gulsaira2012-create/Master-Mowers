@@ -8,7 +8,7 @@ const OurSatisfaction = () => {
           <p className='short'>why Choose Us</p>
           <h1 className="titleChoose">Our Dedication to Your Satisfaction</h1>
           <p className="chooseUs-description">
-          Choose us for expert craftsmanship, top-quality materials, and personalized service that turns your tiling vision into reality. With a commitment to detail, timely completion, and customer satisfaction, we deliver durable and stunning results for every project. Trust our experienced team to enhance your space with precision and care.
+          Choose hello us for expert craftsmanship, top-quality materials, and personalized service that turns your tiling vision into reality. With a commitment to detail, timely completion, and customer satisfaction, we deliver durable and stunning results for every project. Trust our experienced team to enhance your space with precision and care.
           </p>
           <div className="ratings">
             <div className="rating">
