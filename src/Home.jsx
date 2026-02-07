@@ -12,12 +12,14 @@ import PickupDeliveryCTA from "./Components/PickupDeliveryCTA";
 import ServicesGrid from "./Components/ServicesGrid";
 import HeroSlider from "./Components/HeroSlider";
 import Testimonials from "./Components/testimonials";
+import TwoCards from "./Components/tailSample";
 
 export default function Home(){
     return(
         <>
         <Navbar/>
         <HeroSlider/>
+        <TwoCards/>
         {/* <Slider/> */}
         <PickupDeliveryCTA/>
         <About/>
