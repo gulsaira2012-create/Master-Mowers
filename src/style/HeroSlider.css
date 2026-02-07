@@ -1,0 +1,245 @@
+:root{
+  /* ====== NAVBAR / SPACING CONTROL ====== */
+  --nav-h: 84px;             /* set your navbar height here */
+  --hero-pad-top: 24px;      /* extra space under navbar */
+  --hero-pad-btm: 56px;      /* space before next section */
+
+  /* ====== COLORS ====== */
+  --accent: #780000;
+}
+
+/* ====== HERO WRAPPER ====== */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 6%;
+  margin-top: 7%;
+ 
+
+  /* ✅ spacing from navbar + spacing from next section */
+  padding-bottom: var(--hero-pad-btm);
+
+  /* responsive height (better than fixed 520px) */
+  min-height: calc(100vh - var(--nav-h));
+  height: clamp(420px, 60vh, 720px);
+
+  /* center content vertically */
+  display: flex;
+  align-items: center;
+}
+.hero { padding-bottom: 96px; }
+@media (max-width: 1024px) { .hero { padding-bottom: 64px; } }
+@media (max-width: 640px)  { .hero { padding-bottom: 40px; } }
+
+/* ====== SLIDE LAYER ====== */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 700ms ease, transform 900ms ease;
+  /* padding-top: 20px; */
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* overlay for readability */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.62) 0%,
+    rgba(0,0,0,0.35) 50%,
+    rgba(0,0,0,0.12) 100%
+  );
+}
+
+/* ====== CONTENT ====== */
+.hero-content {
+  /* border: 2px solid red; */
+  position: relative;
+  z-index: 3;
+  /* keep content within hero padding area */
+  width: 100%;
+  max-width: min(680px, 92vw);
+
+  /* horizontal padding responsive */
+  padding-left: clamp(16px, 4vw, 60px);
+  padding-right: clamp(16px, 4vw, 60px);
+
+  /* vertical centering */
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* IMPORTANT: this creates clean space within hero */
+  padding-top: 0; /* hero already has top padding */
+  padding-bottom: 0;
+}
+
+/* ====== TEXT STYLES ====== */
+.hero-kicker {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 500ms ease;
+  letter-spacing: 0.6px;
+  font-size: clamp(12px, 1.2vw, 14px);
+  margin: 0 0 10px;
+  padding-top: 100px;
+}
+
+.hero-title {
+  opacity: 0;
+  transition: all 650ms ease;
+  margin: 0 0 12px;
+
+  /* responsive text */
+  font-size: clamp(28px, 3.2vw, 56px);
+  line-height: 1.08;
+  font-weight: 650;
+}
+
+.hero-desc {
+  opacity: 0;
+  transition: all 650ms ease;
+  margin: 0 0 22px;
+
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ====== ACTIONS / BUTTONS ====== */
+.hero-actions {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 650ms ease;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap; /* ✅ so buttons wrap nicely */
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 0px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: rgba(255,255,255,0.65);
+  color: #fff;
+}
+
+
+/* ====== SHOW STATE + DELAYS ====== */
+.show.hero-kicker { opacity: 1; transform: translateY(0); transition-delay: 150ms; }
+.show.hero-title  { opacity: 1; transform: translate(0,0); transition-delay: 260ms; }
+.show.hero-desc   { opacity: 1; transform: translate(0,0); transition-delay: 360ms; }
+.show.hero-actions{ opacity: 1; transform: translateY(0); transition-delay: 480ms; }
+
+/* ====== DIRECTION ENTRANCES ====== */
+.from-top    { transform: translateY(-22px); }
+.from-bottom { transform: translateY(22px); }
+.from-left   { transform: translateX(-22px); }
+.from-right  { transform: translateX(22px); }
+
+/* ====== ARROWS ====== */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.hero-arrow-left { left: 14px; }
+.hero-arrow-right { right: 14px; }
+
+/* ====== DOTS ====== */
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  z-index: 6;
+
+  display: flex;
+  gap: 8px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 0;
+
+  background: rgba(255,255,255,0.45);
+  cursor: pointer;
+}
+
+.hero-dot.is-active {
+  background: var(--accent);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  :root{
+    --nav-h: 72px;
+    --hero-pad-top: 18px;
+    --hero-pad-btm: 40px;
+  }
+
+  .hero {
+    border-radius: 12px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-arrow { display: none; } /* optional */
+  .btn { width: 100%; }
+}

@@ -1,0 +1,173 @@
+
+.aboutus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    /* border: 2px solid black; */
+    padding: 2rem;
+    margin-top: 5rem;
+
+  }
+   
+  .about-main-image {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .aboutus-text {
+    max-width: 600px;
+    /* border: 2px solid black; */
+    /* padding-top: 40px; */
+  }
+  
+  .aboutTitle{
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  .main-title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    color: #1b1b1b;
+    margin-bottom: 1.5rem;
+    font-weight: 200;
+    line-height: 1.8rem;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .about-contact-btn {
+    width: 150px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .about-contact-btn:hover {
+    background-color: rgb(244, 24, 24);
+  }
+
+  .itemConatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+  }
+  .itemText{
+    margin-top: 20px;
+  }
+  .itemText p{
+    font-weight: 200;
+    line-height: 1.8rem;
+  }
+  .itemImg{
+    max-width: 15%;
+  }
+  .item1{
+    color:black;
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    /* border: 2px solid black; */
+  }
+
+.textBox{
+  /* width: 80%; */
+  margin: auto;
+display: flex;
+align-items: center;
+color: black;
+justify-content: center;
+padding:0 2rem;
+
+}
+.textBox img{
+  width: 100%;
+  max-width: 500px;
+
+}
+.itemHeader{
+  width: 80%;
+  color: black;
+  margin-bottom: -20px;
+}
+.itemConatiner p{
+  width: 80%;
+  color: black;
+  font-weight: 200;
+}
+
+.boxText{
+  width: 50%;
+}
+.boxText p{
+  font-weight: 200;
+  line-height: 1.8rem;
+}
+.about-contact-btn a{
+  color: white;
+  transition: 0.3s;
+  padding: 20px 30px;
+}
+  @media (min-width: 900px) {
+    .aboutus-content{
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 5rem;
+    }
+  
+    .aboutus-images{
+      grid-template-columns: 1fr 1fr;
+      
+    }
+  
+    .aboutus-text {
+      text-align: left;
+      max-width: 500px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .item{
+      width: 100%;
+      flex-direction: column;
+      gap: 0px;
+    }
+    .itemConatiner{
+      padding: 2rem;
+    }
+  .itemImg{
+    max-width: 30%;
+  }
+  .textBox{
+    flex-direction: column;
+  }
+  .boxText{
+    width: 100%;
+  }
+  .itemConatiner p{
+    width: 100%;
+  }
+  .itemHeader{
+    width: 100%;
+  }
+  .mainTitle1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  }

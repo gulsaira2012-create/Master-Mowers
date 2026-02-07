@@ -1,0 +1,119 @@
+/* parent container of slider */
+.project-showcase {
+    padding: 2rem;
+    margin-top: 40px;
+  }
+  
+  /* this is the text section that contains the title and subtitle */
+  .text-content-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* border: 2px solid black; */
+  }
+  
+  /* the title slider  */
+  .slider-title {
+    font-size: var(--title-font-size);
+    color: black;
+  }
+  
+  /* this is the subtitle */
+  .slider-description {
+    font-size: var(--body-font-size);
+    color: var(--paragraph-color-text);
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  /* main container for slider item */
+  .slider-item {
+    padding: 0 1rem;
+    position: relative;
+    /* border: 2px solid red; */
+ 
+  }
+  
+  /* the image of slider itself */
+  .slider-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+    /* border: 2px solid red; */
+  }
+  
+  .slider-item:hover .slider-image {
+    transform: scale(1.02); 
+    filter: brightness(0.7); 
+  }
+  
+  /* the title that is shown on the bottom of image on slider */
+  .item-name {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.514);
+    width: calc(100% - 2rem);
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+ 
+  
+
+/* Slick carousel dots for customization */
+  .custom-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:rgba(29, 4, 4, 0.24); /* Default dot color */
+    margin-top: 40px;
+  }
+  
+  .slick-active .custom-dot  {
+    background-color: var(--primary-color) /* Active dot color */
+  }
+  /* left and right arrow for sliding */
+  .rightArrow{
+    margin-top: -20px;
+    margin-left: -150px;
+  }
+  .leftArrow{
+    margin-top: -40px;
+    margin-left: 70px;
+    z-index: 1;
+    }
+  
+  /* Media Queries */
+
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+
+  @media(max-width:600px){
+    .leftArrow, .rightArrow {
+      display: none;
+    }
+    .slider-item:hover .slider-image {
+      transform: scale(1); /* Zoom in effect */
+      filter: brightness(1); /* Darker effect */
+    }
+    .project-showcase {
+      padding: 0 1.5rem;
+    }
+    .slider-description{
+      font-size: 14px;
+    }
+    .text-content-slider{
+      margin-bottom: 10px;
+    }
+  }
+  
