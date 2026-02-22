@@ -1,0 +1,165 @@
+:root{
+  --teal:#023341;
+  --orange:#FD5E02;
+  --cream:#FCF5E3;
+}
+
+/* SECTION */
+.wcu{
+  background: var(--cream);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* CONTAINER */
+.wcu-container{
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
+.wcu-imageWrap{
+  display: flex;
+  justify-content: center;
+}
+
+.wcu-imageBox{
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--teal);
+}
+
+.wcu-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT */
+.wcu-content{
+  text-align: left;
+}
+
+.wcu-title{
+  color: var(--teal);
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.12;
+}
+
+.wcu-subtitle{
+  color: var(--teal);
+  opacity: 0.75;
+  font-size: 15px;
+  margin-bottom: 36px;
+  line-height: 1.5;
+}
+
+/* CARDS */
+.wcu-cards{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.wcu-card{
+  background: var(--teal);
+  border-radius: 14px;
+  padding: 18px;
+  color: var(--cream);
+  box-shadow: 0 10px 22px rgba(2, 51, 65, 0.12);
+}
+
+.wcu-cardTitle{
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.wcu-cardText{
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* BUTTON */
+.wcu-btn{
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  width: auto;
+}
+
+.wcu-btn:hover{
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px){
+  .wcu{
+    padding: 34px 16px;
+  }
+
+  .wcu-container{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  /* image first on mobile */
+  .wcu-imageWrap{
+    order: 1;
+  }
+
+  .wcu-content{
+    order: 2;
+  }
+
+  .wcu-imageBox{
+    max-width: 320px;
+    border-radius: 22px;
+  }
+
+  .wcu-title{
+    font-size: 28px;
+  }
+
+  .wcu-subtitle{
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .wcu-cards{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .wcu-card{
+    padding: 14px;
+  }
+
+  .wcu-btn{
+    width: 100%;
+    padding: 14px 16px;
+  }
+}

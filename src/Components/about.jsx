@@ -1,64 +1,45 @@
-import React from 'react';
-import '../style/about.css';
-import { useNavigate } from 'react-router-dom';
-import mower2 from "../assets/mower2.jpg"
-import mower4 from "../assets/mower4.jpeg"
+import Garage1 from "../Assets/Images/Garageimg1.webp";
+import "../Assets/CSS/Components/AboutSection.css";
 
-import aboutUsImage from "../assets/about.png"
-
-const AboutUs = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/contactUs');
-  };
+export default function AboutSection() {
   return (
-    <section className="why-section">
-      <div className="why-container">
-        <header className="why-header">
-          <h2>Why Choose Master Mowers?</h2>
-          <p>When your equipment breaks down, you need repairs you can rely on</p>
-        </header>
+    <section className="mm-hero">
+      <div className="mm-hero-container">
+        {/* LEFT CONTENT */}
+        <div className="mm-hero-left">
+          <span className="mm-hero-badge">
+            Brisbane’s Mower Experts
+          </span>
 
-        <div className="why-grid">
-          {/* LEFT: images */}
-          <div className="why-images">
-            <div className="why-imageCard">
-              <img
-                src={mower2}
-                alt="Technician repairing equipment"
-              />
-            </div>
+          <h1 className="mm-hero-heading">
+            Professional <br />
+            Mower Repairs <br />
+            You Can Trust
+          </h1>
 
-            <div className="why-imageCard">
-              <img
-                src={mower4}
-                alt="Small engine equipment"
-              />
-            </div>
+          <p className="mm-hero-paragraph">
+            Master Mowers is a trusted Brisbane mower repair and small engine specialist delivering reliable repairs, servicing,
+            and quality second-hand mower sales. We focus on honest advice, fast turnaround, and dependable workmanship for homeowners, landscapers, and commercial clients across Brisbane.
+          </p>
+
+          <div className="mm-hero-buttons">
+            <button className="mm-hero-primaryBtn">
+              Book a Repair
+            </button>
+
+            <button className="mm-hero-secondaryBtn">
+              View Services
+            </button>
           </div>
+        </div>
 
-          {/* RIGHT: cards */}
-          <div className="why-cards">
-            <WhyCard
-              title="Family Owned & Local"
-              text="As a family-owned business right here in Brisbane's south side, we treat every customer like a neighbour. Your equipment matters to us because your satisfaction matters to us."
-              icon="👪"
-            />
-            <WhyCard
-              title="Experienced Technicians"
-              text="Our skilled team has years of hands-on experience with all types of small engine equipment. From simple tune-ups to complex mechanical repairs, we've seen it all."
-              icon="🔧"
-            />
-            <WhyCard
-              title="Honest & Dependable"
-              text="No hidden fees, no unnecessary repairs. We give you straight answers and honest advice about what your equipment needs. Our reputation is built on trust and quality workmanship."
-              icon="🤝"
-            />
-            <WhyCard
-              title="Safety-Focused Service"
-              text="Your safety is our priority. Every repair is performed to the highest standards, ensuring your equipment runs safely and efficiently when it leaves our workshop."
-              icon="🛡️"
+        {/* RIGHT IMAGE */}
+        <div className="mm-hero-imageWrap">
+          <div className="mm-hero-imageBox">
+            <img
+              src={Garage1}
+              alt="Brisbane lawn mower repair specialist"
+              className="mm-hero-image"
             />
           </div>
         </div>
@@ -66,17 +47,3 @@ const AboutUs = () => {
     </section>
   );
 }
-
-function WhyCard({ title, text, icon }) {
-  return (
-    <div className="why-card">
-      <div className="why-icon">{icon}</div>
-      <div className="why-cardBody">
-        <h3>{title}</h3>
-        <p>{text}</p>
-      </div>
-    </div>
-  );
-};
-
-export default AboutUs;

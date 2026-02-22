@@ -1,61 +1,127 @@
-import React from 'react';
-import '../style/footer.css';
+import "../Assets/CSS/Components/Footer.css"
 
-const Footer = () => {
+import locationIconSrc from "../Assets/Images/icons/location.png";
+import telephoneIconSrc from "../Assets/Images/icons/telephone.png";
+import facebookIconSrc from "../Assets/Images/icons/facebook.png";
+import mailIconSrc from "../Assets/Images/icons/mail.png";
+import clockIconSrc from "../Assets/Images/icons/clock.png";
+
+
+export default function Footer() {
+  const usefulLinks = [
+    {title: "About",href:"/about"},
+    {title:"Contact Us",href:"/contact"} ,
+    {title:"Services", href: "/services"} 
+  ];
+  const SocialIcons = [
+    {icon: facebookIconSrc,
+      href: "##"
+    }
+  ]
+
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section logo-section">
-          {/* <img src="path/to/logo.png" alt="Logo" className="footer-logo" /> */}
-          <h1 className='footer-logo'>Master Mowers</h1>
-          <p>With over 10 years of experience, Master Tiling Perth transforms spaces with exceptional craftsmanship, innovative designs, and outstanding customer service.</p>
+    <footer className="mm-footer">
+
+      <div className="mm-container">
+        <div className="mm-grid">
+          {/* Brand */}
+          <div>
+            <div className="mm-logo-footer">
+              <span>Master</span>
+              <span className="mm-logoAccent">Mowers</span>
+            </div>
+
+            <p className="mm-desc">
+              Master Mowers provides professional lawn mower repairs, small engine servicing, ride-on mower repairs, zero-turn mower repairs, and refurbished mower sales across Brisbane and surrounding suburbs.
+            </p>
+
+            <div className="mm-social">
+              <SocialBtn>{SocialIcons[0]}</SocialBtn>
+            </div>
+          </div>
+
+          {/* Useful links */}
+          <div>
+            <h3 className="mm-title">Useful links</h3>
+            <ul className="mm-list">
+              {usefulLinks.map((t) => (
+                <li key={t.href}>
+                  <ThreeDLink>{t}</ThreeDLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contacts */}
+          <div>
+            <h3 className="mm-title">Our contacts</h3>
+            <ul className="mm-contacts">
+              <li><MapIcon />7 faculty Circut Meadowbrook QLD 4131</li>
+              <li>
+                <PhoneIcon />
+                <a className="mm-contactLink" href="tel:+456496787">+456496787</a>
+              </li>
+              <li>
+                <MailIcon />
+                <a className="mm-contactLink" href="mailto:mastermowersbris@.com">mastermowersbris@.com</a>
+              </li>
+              <li className="mm-hours">
+                <ClockIcon />
+                <span>
+                  Open 7 Days a Week<br />
+                  9:00 AM – 9:00 PM
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="footer-section quick-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="/services">Home</a></li>
-            <li><a href="/about">About us</a></li>
-            <li><a href="/contact">Contact us</a></li>
-          </ul>
-        </div>
-     
-        <div className="footer-section services">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="./services">Kitchen</a></li>
-            <li><a href="/service2">Floor</a></li>
-            <li><a href="/service3">Exterior</a></li>
-            <li><a href="/service4">Bathroom</a></li>
-            <li><a href="/service4">Wall</a></li>
-            <li><a href="/service4">Waterproofing</a></li>
-          </ul>
-        </div>
-        <div className="footer-section quick-links">
-          <h4>Contacts</h4>
-          <ul>
-            <li>123 Down Town main road,<br></br>Perth, Australia</li>
-            <li><strong>Phone:</strong><a href="tel:+0470339477"> +0470339477</a></li>
-            <li><strong>Email:</strong><a href="mailto:iti.aba1@yahoo.com"> iti.aba1@yahoo.com</a></li>
-          </ul>
-        </div>
-        {/* <div className="footer-section subscribe">
-          <h4>Subscribe</h4>
-          <form>
-            <input type="email" placeholder="Get Updated" />
-            <button type="submit" className='footer'>➔</button>
-          </form>
-        </div> */}
-      </div>
-      <div className="footer-bottom">
-        <div className="social-links">
-          <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a>
-          <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
-        </div>
-        <p>© 2024 Shaheen Solutions. All rights reserved</p>
+
+      
+<div className="mm-divider"></div>
+
+<div className="mm-copy">
+  © Master Mowers. All Rights Reserved.
+</div>
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;
+/* ========= 3D LINK ========= */
+function ThreeDLink({ children }) {
+  return (
+    <a href={children.href} className="mm-link3d">
+      {children.title}
+    </a>
+  );
+}
+
+/* ========= SOCIAL ========= */
+function SocialBtn({ children }) {
+  return <a href={children.href} className="mm-socialBtn"> <span>
+    <img src={children.icon} alt="Telephone" width="18" height="18" />
+  </span></a>;
+}
+
+/* ========= ICONS ========= */
+const MapIcon = () => (
+  <span>
+    <img src={locationIconSrc} alt="Location" width="18" height="18" />
+  </span>
+);
+const PhoneIcon = () => (
+  <span>
+    <img src={telephoneIconSrc} alt="Telephone" width="18" height="18" />
+  </span>
+);
+const MailIcon = () => (
+  <span>
+    <img src={mailIconSrc} alt="Mail" width="18" height="18" />
+  </span>
+);
+const ClockIcon = () => (
+  <span>
+    <img src={clockIconSrc} alt="Clock" width="18" height="18" />
+  </span>
+);
+

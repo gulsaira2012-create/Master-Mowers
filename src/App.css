@@ -22,6 +22,11 @@
  --z-fixed: 100;
  --gray-color:#909090;
  --body-font-size:16px;
+ 
+  --bg:#023341;
+  --deep:#023341;
+  --accent:#FD5E02;
+  --cream:  rgb(252, 245, 227);
 }
 
 body {

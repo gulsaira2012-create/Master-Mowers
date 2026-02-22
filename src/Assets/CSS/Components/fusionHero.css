@@ -1,0 +1,304 @@
+/* FusionHero.css */
+:root {
+  --bg: #023341;
+  --text: #ffffff;
+  --textDim: rgba(255, 255, 255, 0.85);
+  --line: rgba(255, 255, 255, 0.22);
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.fh-hero {
+  width: 100%;
+  background: var(--bg);
+}
+
+.fh-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px; /* ✅ space left/right of screen */
+}
+
+.fh-grid {
+  min-height: 100vh; /* ✅ one-screen hero */
+  display: grid;
+  align-items: center;
+  gap: 40px;
+  padding: 36px 0;
+}
+
+@media (min-width: 1024px) {
+  .fh-grid {
+    grid-template-columns: 1.05fr 1px 1fr;
+    gap: 0;
+    padding: 40px 0;
+  }
+}
+
+/* LEFT */
+.fh-left {
+  padding-left: 18px;
+  padding-right: 10px;
+}
+
+@media (min-width: 640px) {
+  .fh-left {
+    padding-left: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  .fh-left {
+    padding-left: 40px;
+    padding-right: 44px;
+  }
+}
+
+.fh-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cream);
+  color: var(--bg);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fh-pillIcon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--cream);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.fh-pillScribble {
+  margin-left: 4px;
+  display: inline-flex;
+}
+
+.fh-title {
+  margin: 18px 0 0;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+  font-size: 36px;
+}
+
+@media (min-width: 640px) {
+  .fh-title {
+    font-size: 44px;
+  }
+}
+@media (min-width: 1024px) {
+  .fh-title {
+    font-size: 52px;
+  }
+}
+
+.fh-subtitle {
+  margin: 18px 0 0;
+  color: var(--textDim);
+  font-size: 14.5px;
+  line-height: 1.9;
+  max-width: 520px;
+}
+
+.fh-ctaRow {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+}
+
+.fh-primaryBtn {
+  background: #fff;
+  color: var(--bg);
+  border: 0;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 13px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.fh-secondaryBtn {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 6px 4px;
+}
+
+.fh-playCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fh-watchText {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fh-watchTime {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* DIVIDER */
+.fh-divider {
+  display: none;
+  height: 520px;
+  border-left: 1px dashed var(--line);
+  justify-self: center;
+}
+@media (min-width: 1024px) {
+  .fh-divider {
+    display: block;
+  }
+}
+
+/* RIGHT */
+.fh-right {
+  padding-right: 10px;
+}
+@media (min-width: 1024px) {
+  .fh-right {
+    padding-left: 44px;
+  }
+}
+
+.fh-marqueeWrap {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.fh-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  height: 100%;
+}
+
+.fh-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.fh-colDotted {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -10px;
+  width: 1px;
+  border-left: 1px dashed rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+}
+
+/* image cards */
+.fh-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-bottom: 22px;
+}
+
+.fh-card {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow);
+}
+
+.fh-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* fades */
+.fh-fadeTop,
+.fh-fadeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 64px;
+  pointer-events: none;
+}
+.fh-fadeTop {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg), rgba(23, 53, 46, 0));
+}
+.fh-fadeBottom {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg), rgba(23, 53, 46, 0));
+}
+
+/* marquee animation (slow + seamless) */
+.fh-marquee {
+  will-change: transform;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 26s;
+}
+
+.fh-marqueeUp {
+  animation-name: fhMarqueeUp;
+}
+.fh-marqueeDown {
+  animation-name: fhMarqueeDown;
+}
+
+/* render content twice => move by 50% */
+@keyframes fhMarqueeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes fhMarqueeDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fh-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile: stack */
+@media (max-width: 1023px) {
+  .fh-marqueeWrap {
+    height: 460px;
+  }
+  .fh-cols {
+    gap: 18px;
+  }
+}

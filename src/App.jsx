@@ -1,33 +1,32 @@
-import React, { Suspense } from "react";
+import { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Preloader from "./Components/preLoader";
 import "./App.css";
 
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+/** Lazy pages */
+const Home = lazy(() => import("./Pages/Home"));
+const ContactUs = lazy(() => import("./Pages/ContactInfo"));
+const AboutUs = lazy(() => import("./Pages/AboutUs"));
+const Services = lazy(() => import("./Pages/Services"));
 
-// Lazy load the components
-const Home = React.lazy(() => import("./Home"));
-const ContactUs = React.lazy(() => import("./contactUs"));
-const AboutUs = React.lazy(() => import("./AboutUs"));
-const Kitchen = React.lazy(() => import("./services/kitchen"));
-const Floor = React.lazy(() => import("./services/floor"));
 
-const App = () => {
+export default function App() {
   return (
     <Router>
+
       <main className="main-content">
-        <Suspense fallback={<Preloader/>}>
+        <Suspense fallback={<Preloader />}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contactUs" element={<ContactUs />} />
-            <Route path="/aboutUs" element={<AboutUs />} />
-            <Route path="/kitchen" element={<Kitchen />} />
-            <Route path="/floor" element={<Floor />} />
-            {/* Define other routes that you need */}
+           <Route path="/" element={<Home />} />
+           <Route path="/contact" element={<ContactUs />} />
+           <Route path="/about" element={<AboutUs />} />
+           <Route path="/services" element={<Services />} />
+
+          <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
       </main>
     </Router>
   );
-};
-
-export default App;
+}

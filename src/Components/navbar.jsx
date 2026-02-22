@@ -1,154 +1,158 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Logo from "../Assets/Images/Logo.webp";
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu,IoPhonePortraitOutline} from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
-import { IoIosArrowDown } from "react-icons/io";
-import { MdOutlineMail } from "react-icons/md";
-import logo2 from "../assets/logo2.png"
-import "../style/navbar.css";
+import "../Assets/CSS/Components/Navbar.css";
 
+export default function Navbar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const wrapRef = useRef(null);
 
-const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate('/contactUs');
-  };
-
-  
-  const [showMenu, setShowMenu] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-
-  const closeMenuOnMobile = () => {
-    if (window.innerWidth <= 1150) {
-      setShowMenu(false);
+  // close everything on Esc
+  useEffect(() => {
+    function onEsc(e) {
+      if (e.key === "Escape") setMobileOpen(false);
     }
-  };
+    document.addEventListener("keydown", onEsc);
+    return () => document.removeEventListener("keydown", onEsc);
+  }, []);
 
-  const getNavLinkClassName = ({ isActive }) => (isActive ? "nav__link active-link" : "nav__link");
+  // lock body scroll when mobile menu open
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileOpen]);
+
+  // close mobile if resized to desktop
+  useEffect(() => {
+    function onResize() {
+      if (window.innerWidth >= 900) setMobileOpen(false);
+    }
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  function closeMobile() {
+    setMobileOpen(false);
+  }
+
   return (
-    <header className="header ">
-      
-            <ul className="contact__item">
-                <li className="navItem">
-                    <a href="mailto:iti.aba1@yahoo.com">
-                    <MdOutlineMail className="icon-large"/>iti.aba1@yahoo.com
-                    </a>
-                </li>
+    <>
+      <header className="mm-header">
+        <div className="mm-container-nav">
+          <a href="/" className="mm-brand">
+            <img src={Logo} alt="Master Mowers Logo" className="mm-logo" />
+            <span className="mm-brandText">MASTER MOWERS</span>
+          </a>
 
-                <li className="navItem">
-                <a href="tel:0470339477">
-                <IoPhonePortraitOutline className="icon-large"/>0470339477
+          {/* Hamburger */}
+          <button
+            type="button"
+            aria-label="Open menu"
+            onClick={() => setMobileOpen(true)}
+            className="mm-hamburger"
+          >
+            ☰
+          </button>
+
+          {/* Desktop nav */}
+          <nav className="mm-desktop-nav" ref={wrapRef}>
+            <NavLink to="/" className="mm-link">
+              Home
+            </NavLink>
+
+            <NavLink to="/services" className="mm-link">
+              Services
+            </NavLink>
+
+            <NavLink to="/about" className="mm-link">
+              About
+            </NavLink>
+
+            <NavLink to="/contact" className="mm-link">
+              Contact
+            </NavLink>
+
+            <a href="/contact" className="mm-cta">
+              Get a Quote <span className="mm-ctaArrow">›</span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <>
+          <div className="mm-overlay" onClick={closeMobile} />
+
+          <div className="mm-mobilePanel" role="dialog" aria-modal="true">
+            <div className="mm-mobileInner">
+              <div className="mm-mobileTopRow">
+                <div className="mm-mobileBrand">
+                  <img
+                    src={logo}
+                    alt="Master Mowers Logo"
+                    className="mm-logo mm-logo--sm"
+                  />
+                  <span className="mm-brandText mm-brandText--sm">
+                    MASTER MOWERS
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  aria-label="Close menu"
+                  onClick={closeMobile}
+                  className="mm-closeBtn"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="mm-mobileLinks">
+                <NavLink to="/" className="mm-mobileLink" onClick={closeMobile}>
+                  <span>Home</span>
+                </NavLink>
+
+                <NavLink
+                  to="/services"
+                  className="mm-mobileLink"
+                  onClick={closeMobile}
+                >
+                  <span>Services</span>
+                </NavLink>
+
+                <NavLink
+                  to="/about"
+                  className="mm-mobileLink"
+                  onClick={closeMobile}
+                >
+                  <span>About</span>
+                </NavLink>
+
+                <NavLink
+                  to="/contact"
+                  className="mm-mobileLink"
+                  onClick={closeMobile}
+                >
+                  <span>Contact</span>
+                </NavLink>
+
+                <a
+                  href="/contact"
+                  className="mm-mobileCTA"
+                  onClick={closeMobile}
+                >
+                  Get a Quote <span className="mm-ctaArrow">›</span>
                 </a>
-                </li>
-                
-            </ul>
-       
-
-      <nav className="nav container">
-
-        {/* LOGO */}
-        <NavLink to="/" className="nav__logo">
-          {/* MASTER MOWERS */}
-          <img className="logoimg" src={logo2} alt="logo" />
-        </NavLink>
-
-        <div
-          className={`nav__menu ${showMenu ? "show-menu" : ""}`}
-          id="nav-menu">
-
-          <ul className="nav__list">
-
-            <li className="nav__item">
-              <NavLink to="/" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                Home
-              </NavLink>
-            </li>
-
-            <li className="nav__item dropdown" onClick={toggleDropdown}>
-              <span className="nav__link pointer">Services <IoIosArrowDown className="arrow"/></span>
-              {showDropdown && (
-                <ul className="dropdown__menu">
-                  <li className="dropdown__item">
-                    <NavLink to="/Kitchen" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Lawn Mower Repairs & Servicing
-                    </NavLink>
-                  </li>
-                  <li className="dropdown__item">
-                    <NavLink to="/floor" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Ride-On Mower Repairs
-                    </NavLink>
-                  </li>
-                  <li className="dropdown__item">
-                    <NavLink to="/service2" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Whipper Snipper & Brushcutter Repairs
-                    </NavLink>
-                  </li>
-                  <li className="dropdown__item">
-                    <NavLink to="/service3" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Leaf Blower Repairs & Servicing
-                    </NavLink>
-                  </li>
-                  <li className="dropdown__item">
-                    <NavLink to="/service3" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Hedge Trimmer Repairs
-                    </NavLink>
-                  </li>
-                  
-                  <li className="dropdown__item">
-                    <NavLink to="/service3" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                      Chainsaw Repairs & Sharpening
-                    </NavLink>
-                  </li>
-                  <li className="dropdown__item">
-                    <NavLink to="/service3" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                     Small Engine Diagnostics & Repairs
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
-            </li>
-
-            <li className="nav__item">
-              <NavLink to="/AboutUs" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                About
-              </NavLink>
-            </li>
-
-            <li className="nav__item">
-              <NavLink to="/contactUs" className={getNavLinkClassName} onClick={closeMenuOnMobile}>
-                Contact
-              </NavLink>
-            </li>
-
-            <li className="nav__item">
-              <button className="nav__cta" onClick={handleClick}> Get a free Qoute</button>
-
-            </li>
-
-          </ul>
-
-          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
-            <IoClose />
+              </div>
+            </div>
           </div>
-
-        </div>
-
-        <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-          <IoMenu />
-        </div>
-
-      </nav>
-    </header>
+        </>
+      )}
+    </>
   );
-};
-
-export default Navbar;
+}

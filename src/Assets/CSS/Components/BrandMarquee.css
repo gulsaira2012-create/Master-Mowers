@@ -1,0 +1,171 @@
+
+/* ====== SECTION ====== */
+.brandMarquee {
+  width: 100%;
+  background: var(--mm-cream);
+  padding: 10px 0;
+}
+
+/* container */
+.brandMarquee__inner {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: auto 1px 1fr;
+  align-items: center;
+  gap: 26px;
+}
+
+/* LEFT TEXT */
+.brandMarquee__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--mm-dark);
+}
+
+/* divider */
+.brandMarquee__divider {
+  width: 1px;
+  height: 64px;
+  background: rgba(2, 51, 65, 0.22);
+}
+
+/* RIGHT AREA */
+.brandMarquee__right {
+  position: relative;
+  width: 100%;
+  min-width: 0; /* IMPORTANT for grid overflow on mobile */
+}
+
+/* fade edges */
+.brandMarquee__fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 54px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brandMarquee__fade--left {
+  left: 0;
+  background: linear-gradient(to right, var(--mm-cream), rgba(252,245,227,0));
+}
+
+.brandMarquee__fade--right {
+  right: 0;
+  background: linear-gradient(to left, var(--mm-cream), rgba(252,245,227,0));
+}
+
+/* viewport */
+.brandMarquee__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ====== TRACK ======
+   Use translateX(-50%) but ensure the track is exactly 2x content.
+   Keep padding OUTSIDE animation to avoid drift.
+*/
+.brandMarquee__track {
+  --gap: 12px;
+  --card-h: 64px;
+  --card-w: 172px;
+  --radius: 16px;
+  --speed: 34s;
+
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  width: max-content;
+
+  animation: brandMarqueeScroll var(--speed) linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover (desktop) */
+@media (hover:hover) {
+  .brandMarquee__viewport:hover .brandMarquee__track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes brandMarqueeScroll {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+
+/* cards */
+.brandMarquee__card {
+  height: var(--card-h);
+  width: var(--card-w);
+  border-radius: var(--radius);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 260ms ease;
+}
+
+.brandMarquee__card:hover {
+  transform: translateY(-2px);
+}
+
+.brandMarquee__logo {
+  max-width: 85%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  opacity: 0.96;
+}
+
+/* ====== MOBILE ====== */
+@media (max-width: 860px) {
+  .brandMarquee {
+    padding: 12px 0;
+  }
+
+  .brandMarquee__inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .brandMarquee__divider { display: none; }
+
+  .brandMarquee__title {
+    font-size: 16px;
+  }
+
+  .brandMarquee__track {
+    --card-w: 140px;
+    --card-h: 52px;
+    --gap: 12px;
+    --speed: 26s;
+  }
+
+  .brandMarquee__fade { width: 34px; }
+}
+
+@media (max-width: 420px) {
+  .brandMarquee__inner { padding: 0 14px; }
+
+  .brandMarquee__track {
+    --card-w: 128px;
+    --card-h: 48px;
+    --gap: 10px;
+    --speed: 22s;
+  }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .brandMarquee__track {
+    animation: none;
+    transform: none;
+  }
+}

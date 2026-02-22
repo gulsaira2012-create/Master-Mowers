@@ -1,0 +1,219 @@
+/* ServicesMiniCards.css (Expert theme polish: #023341, #FD5E02, #FCF5E3) */
+
+:root {
+
+  /* extra helpers */
+  --mm-ink: rgba(2, 51, 65, 0.88);
+  --mm-muted: rgba(2, 51, 65, 0.68);
+  --mm-border: rgba(2, 51, 65, 0.14);
+  --mm-border-strong: rgba(2, 51, 65, 0.22);
+  --mm-shadow: 0 22px 44px rgba(2, 51, 65, 0.12);
+  --mm-shadow-strong: 0 26px 60px rgba(2, 51, 65, 0.22);
+  --mm-orange-shadow: 0 26px 70px rgba(253, 94, 2, 0.22);
+}
+
+/* Section background */
+.smc-section {
+  width: 100%;
+  background: var(--cream);
+  padding: 70px 16px 60px;
+}
+
+.smc-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== STAGE ===== */
+.smc-stage {
+  position: relative;
+  height: 150px;
+  display: grid;
+  place-items: center;
+}
+
+/* ===== CARDS BASE ===== */
+.smc-card {
+  position: absolute;
+  width: min(520px, 92vw);
+  max-width: 350px;
+  min-height: 110px;
+  border-radius: 18px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  align-items: center;
+  gap: 18px;
+
+  /* ✅ themed surfaces */
+  background: rgba(252, 245, 227, 0.78);
+  border: 1.5px solid var(--mm-border);
+
+  /* initial stacked state */
+  transform: translateX(0) scale(0.96);
+  opacity: 0;
+
+  /* ✅ premium easing */
+  transition:
+    transform 800ms cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 800ms ease,
+    box-shadow 500ms ease,
+    background-color 400ms ease,
+    border-color 400ms ease;
+
+  box-shadow: var(--mm-shadow);
+  backdrop-filter: blur(8px);
+}
+
+/* Fade in */
+.smc-stage.is-mounted .smc-card {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Spread positions */
+.smc-stage.is-mounted .smc-left {
+  transform: translateX(-400px) scale(1);
+}
+.smc-stage.is-mounted .smc-center {
+  transform: translateX(0) scale(1);
+}
+.smc-stage.is-mounted .smc-right {
+  transform: translateX(400px) scale(1);
+}
+
+/* ===== CENTER CARD (DARK PREMIUM) ===== */
+.smc-center {
+  background: var(--deep);
+  border-color: rgba(252, 245, 227, 0.18);
+  box-shadow: var(--mm-shadow-strong);
+  z-index: 2;
+}
+
+/* ===== ICON BOX ===== */
+.smc-iconBox {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+
+  /* ✅ icon container uses deep teal by default */
+  background: var(--deep);
+  border: 1px solid rgba(252, 245, 227, 0.18);
+  display: grid;
+  place-items: center;
+
+  transition: transform 220ms ease, background-color 260ms ease, border-color 260ms ease;
+}
+
+/* Center card icon box (cream surface) */
+.smc-iconBox--light {
+  background: rgba(252, 245, 227, 0.96);
+  border-color: rgba(2, 51, 65, 0.18);
+}
+
+/* ===== TEXT ===== */
+.smc-h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 850;
+  letter-spacing: -0.2px;
+  color: var(--deep);
+}
+
+.smc-p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--mm-muted);
+}
+
+/* Center card text */
+.smc-h3--light {
+  color: var(--cream);
+}
+.smc-p--light {
+  color: rgba(252, 245, 227, 0.82);
+}
+
+/* ===== HOVER EFFECT (keeps spread transform intact) ===== */
+/* Important: when cards are absolute + translated, we must not overwrite translateX.
+   So we apply hover only to shadow/border + a subtle lift via filter, not transform. */
+.smc-card:hover {
+  border-color: rgba(253, 94, 2, 0.55);
+  box-shadow: var(--mm-orange-shadow);
+}
+
+/* icon box accent on hover */
+.smc-card:hover .smc-iconBox {
+  background: var(--accent);
+  border-color: rgba(253, 94, 2, 0.55);
+  transform: translateY(-1px);
+}
+
+/* Center card hover: keep premium + orange rim */
+.smc-center:hover {
+  border-color: rgba(253, 94, 2, 0.55);
+  box-shadow: 0 30px 70px rgba(2, 51, 65, 0.28), 0 18px 60px rgba(253, 94, 2, 0.16);
+}
+
+/* ===== Bottom text ===== */
+.smc-bottomText {
+  margin: 40px auto 0;
+  text-align: center;
+  max-width: 760px;
+  font-size: 18px;
+  color: var(--mm-ink);
+  padding-bottom: 40px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 980px) {
+  .smc-stage {
+    height: auto;
+    display: grid;
+    gap: 18px;
+    place-items: stretch;
+  }
+
+  .smc-card {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  .smc-stage.is-mounted .smc-card {
+    transform: translateY(0) scale(1);
+  }
+
+  .smc-stage.is-mounted .smc-left,
+  .smc-stage.is-mounted .smc-center,
+  .smc-stage.is-mounted .smc-right {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+  .smc-card {
+    grid-template-columns: 66px 1fr;
+    padding: 16px;
+    gap: 12px;
+    border-radius: 16px;
+  }
+
+  .smc-iconBox {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+  }
+
+  .smc-h3 {
+    font-size: 18px;
+  }
+
+  .smc-p {
+    font-size: 13px;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "homepage": ".",
-  "name": "zuhakwebsite",
+  "name": "MasterMowers",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,18 +13,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.19.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icon": "^1.0.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1",
-    "react-slick": "^0.30.2",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.4"
+    "react-slick": "^0.30.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -34,7 +30,6 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
     "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
     "vite": "^5.3.1"
   }
 }
