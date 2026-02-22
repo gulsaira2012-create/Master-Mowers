@@ -93,7 +93,7 @@ export default function Navbar() {
               <div className="mm-mobileTopRow">
                 <div className="mm-mobileBrand">
                   <img
-                    src={logo}
+                    src={Logo}
                     alt="Master Mowers Logo"
                     className="mm-logo mm-logo--sm"
                   />
