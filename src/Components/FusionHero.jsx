@@ -4,7 +4,7 @@ import heroimg1 from "../Assets/Images/heroimg1.webp";
 import heroimg2 from "../Assets/Images/heroimg2.webp";
 import mowers1 from "../Assets/Images/mowers1.webp"
 import mowers2 from "../Assets/Images/mowers2.webp"
-import tools from "../Assets/Images/tools.webp"
+import tools from "../Assets/Images/Tools.webp"
 
 export default function FusionHero() {
   // ✅ ONLY images in the cards (no text UI cards at all)
