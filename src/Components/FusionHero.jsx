@@ -4,6 +4,7 @@ import heroimg1 from "../Assets/Images/heroimg1.webp";
 import heroimg2 from "../Assets/Images/heroimg1.webp";
 import mowers1 from "../Assets/Images/mowers1.webp"
 import mowers2 from "../Assets/Images/mowers2.webp"
+import tools from "../Assets/Images/tools.webp"
 
 export default function FusionHero() {
   // ✅ ONLY images in the cards (no text UI cards at all)
@@ -15,7 +16,7 @@ export default function FusionHero() {
   ];
 
   const colDown = [
-    { src: "https://images.unsplash.com/photo-1630449425681-c4fa93ad1268?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", h: 150 },
+    { src: tools, h: 150 },
     { src: "https://images.unsplash.com/photo-1671543565338-8b22a87b8359?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", h: 180 },
     { src: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", h: 220 },
     { src: "https://images.unsplash.com/photo-1748893790747-fc2646924cbe?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", h: 170 },
