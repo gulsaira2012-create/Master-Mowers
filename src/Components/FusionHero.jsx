@@ -2,14 +2,16 @@
 import "../Assets/CSS/Components/fusionHero.css";
 import heroimg1 from "../Assets/Images/heroimg1.webp";
 import heroimg2 from "../Assets/Images/heroimg1.webp";
+import mowers1 from "../Assets/Images/mowers1.webp"
+import mowers2 from "../Assets/Images/mowers2.webp"
 
 export default function FusionHero() {
   // ✅ ONLY images in the cards (no text UI cards at all)
   const colUp = [
     { src: heroimg1, h: 150 },
     { src: heroimg2, h: 180 },
-    { src: "https://plus.unsplash.com/premium_photo-1747911361940-5188c161ff7b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", h: 220 },
-    { src: "https://images.unsplash.com/photo-1683115099247-7e33663f91cc?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0", h: 170 },
+    { src: mowers1, h: 220 },
+    { src: mowers2, h: 170 },
   ];
 
   const colDown = [
