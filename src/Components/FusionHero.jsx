@@ -5,6 +5,7 @@ import heroimg2 from "../Assets/Images/heroimg2.webp";
 import mowers1 from "../Assets/Images/mowers1.webp"
 import mowers2 from "../Assets/Images/mowers2.webp"
 import tools from "../Assets/Images/Tools.webp"
+import { Link } from "react-router-dom";
 
 export default function FusionHero() {
   // ✅ ONLY images in the cards (no text UI cards at all)
@@ -64,7 +65,10 @@ export default function FusionHero() {
             </p>
 
             <div className="fh-ctaRow">
-              <button className="fh-primaryBtn">Get Started Now</button>
+              {/* <button  className="fh-primaryBtn">Get Started Now</button> */}
+                <Link to="/about">
+                  <button className="fh-primaryBtn">Get Started Now</button>
+                 </Link>
 
               <button className="fh-secondaryBtn">
                 {/* <span className="fh-playCircle" aria-hidden="true">
