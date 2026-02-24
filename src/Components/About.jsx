@@ -24,11 +24,11 @@ export default function AboutSection() {
           </p>
 
           <div className="mm-hero-buttons">
-            <Link to="/services"><button className="mm-hero-primaryBtn">
+            <Link to="/contact"><button className="mm-hero-primaryBtn">
               Book a Repair
             </button>
             </Link>
-            <Link to="/contact">
+            <Link to="/services">
             <button className="mm-hero-secondaryBtn">
               View Services
             </button>

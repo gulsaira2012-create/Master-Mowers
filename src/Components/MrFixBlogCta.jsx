@@ -2,6 +2,7 @@
 import React from "react";
 import "../Assets/CSS/Components/MrFixBlogCta.css";
 import handyman from "../Assets/Images/handyman.png";
+import { Link } from "react-router-dom";
 
 export default function MrFixBlogCta() {
   const handleScrollDown = () => {
@@ -50,9 +51,12 @@ export default function MrFixBlogCta() {
 
         {/* CONTENT PANEL (desktop layout stays same) */}
         <div className="mrfixCta__bottom">
+          <Link to="/contact">
           <a className="mrfixCta__blog" href="#blog">
             Contact Us
           </a>
+          </Link>
+          
 
           <span className="mrfixCta__vline" />
 
