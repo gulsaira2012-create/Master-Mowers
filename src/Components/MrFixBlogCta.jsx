@@ -51,11 +51,10 @@ export default function MrFixBlogCta() {
 
         {/* CONTENT PANEL (desktop layout stays same) */}
         <div className="mrfixCta__bottom">
-          <Link to="/contact">
-          <a className="mrfixCta__blog" href="#blog">
+          <a className="mrfixCta__blog" href="/contact">
             Contact Us
           </a>
-          </Link>
+          
           
 
           <span className="mrfixCta__vline" />
