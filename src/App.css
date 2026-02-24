@@ -27,12 +27,13 @@
   --deep:#023341;
   --accent:#FD5E02;
   --cream:  rgb(252, 245, 227);
+  --dark: #023341;
 }
 
 body {
- background-color:white;
- color: var(--paragraph-text-color);
- font-family: var(--primary-font);
+  font-family: var(--primary-font);
+  background: var(--cream);
+  color: var(--dark);
 }
 
 ul {

@@ -32,9 +32,7 @@ export default function ContactInfoCards() {
             <div className="cic-content">
               <h3 className="cic-h3">Our address</h3>
               <p className="cic-p">
-                570 8th Ave, New York, NY 10018
-                <br />
-                United States
+                7 Faculty circuit, Meadowbrook 4131, Brisbane
               </p>
             </div>
           </a>
@@ -47,9 +45,9 @@ export default function ContactInfoCards() {
             <div className="cic-content">
               <h3 className="cic-h3 cic-h3--light">Contact number</h3>
               <p className="cic-p cic-p--light">
-                +01 123 456 7890
+                0456496787
                 <br />
-                info.support@gmail.com
+                mastermowersbris@gmail.com
               </p>
             </div>
           </a>
@@ -62,9 +60,8 @@ export default function ContactInfoCards() {
             <div className="cic-content">
               <h3 className="cic-h3">Opening hour</h3>
               <p className="cic-p">
-                Monday - Saturday: 9:00 - 10:00
-                <br />
-                Sunday: Closed
+                Monday - Saturday <br/> 9:00 am - 9:00 pm
+              
               </p>
             </div>
           </a>

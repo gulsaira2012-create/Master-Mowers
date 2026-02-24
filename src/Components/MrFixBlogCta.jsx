@@ -2,14 +2,13 @@
 import React from "react";
 import "../Assets/CSS/Components/MrFixBlogCta.css";
 import handyman from "../Assets/Images/handyman.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function MrFixBlogCta() {
-  const handleScrollDown = () => {
-    // change this target id if you want
-    const el = document.querySelector("#blog");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  const Navigate = useNavigate()
+  function handleClick(){
+    Navigate("/contact");
+  }
 
   return (
     <section className="mrfixCta">
@@ -41,7 +40,7 @@ export default function MrFixBlogCta() {
           </div>
 
           {/* ✅ Mobile arrow centered under the heading (like screenshot) */}
-          <button className="mrfixCta__downBtn" type="button" onClick={handleScrollDown} aria-label="Scroll down">
+          <button className="mrfixCta__downBtn" type="button" onClick={handleClick} aria-label="Scroll down">
             <span className="mrfixCta__downIcon">Contact</span>
           </button>
         </div>
@@ -51,9 +50,12 @@ export default function MrFixBlogCta() {
 
         {/* CONTENT PANEL (desktop layout stays same) */}
         <div className="mrfixCta__bottom">
-          <a className="mrfixCta__blog" href="/contact">
+          <Link to="/contact">
+          <a className="mrfixCta__blog">
             Contact Us
           </a>
+          </Link>
+        
           
           
 
@@ -63,10 +65,6 @@ export default function MrFixBlogCta() {
             Have a question or need mower repairs in Brisbane? We’re here to help. Whether it’s servicing, repairs, or
             second-hand mower sales, Master Mowers delivers reliable solutions with friendly local service.
           </p>
-
-          <button className="mrfixCta__btn" type="button" onClick={handleScrollDown} aria-label="Scroll down">
-            <span className="mrfixCta__btnIcon">↓</span>
-          </button>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 :root {
-  --dark: #023341;
+
   --orange: #FD5E02;
   --cream: #FCF5E3;
 
@@ -9,12 +9,12 @@
   --sand: #f6efe1;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: Avenir, sans-serif;
   background: var(--cream);
   color: var(--dark);
-}
+} */
 
 .section-padding {
   padding: 120px 20px;
