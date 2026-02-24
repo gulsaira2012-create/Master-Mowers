@@ -1,5 +1,6 @@
 import Garage1 from "../Assets/Images/Garageimg1.webp";
 import "../Assets/CSS/Components/AboutSection.css";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   return (
