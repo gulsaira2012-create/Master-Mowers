@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <MailIcon />
-                <a className="mm-contactLink" href="mailto:mastermowersbris@.com">mastermowersbris@.com</a>
+                <a className="mm-contactLink" href="mailto:mastermowersbris@.com">mastermowersbris@gmail.com</a>
               </li>
               <li className="mm-hours">
                 <ClockIcon />
