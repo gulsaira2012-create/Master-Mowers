@@ -53,11 +53,11 @@ export default function FusionHero() {
             </div>
 
             <h2 className="fh-title">
+              Mower Repair Brisbane
+              <br />
+              Ride-on & Small Engine
+              <br />
               Master Mowers
-              <br />
-              Powering Your
-              <br />
-              Machine
             </h2>
 
             <p className="fh-subtitle">
