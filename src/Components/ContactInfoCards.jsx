@@ -19,7 +19,7 @@ export default function ContactInfoCards() {
     <section className="cic-section" aria-labelledby="cic-title">
       <div className="cic-container">
         <h2 id="cic-title" className="cic-title">
-          Our contact information
+          Contact Master Mowers Brisbane
         </h2>
 
         {/* Stage handles the animation positions */}

@@ -30,8 +30,8 @@ export default function MrFixBlogCta() {
         <div className="mrfixCta__hero">
           <div className="mrfixCta__top">
             <h2 className="mrfixCta__title">
-              Master Services for <br />
-              every Engine
+              Mower Service & repairs Brisbane <br />
+              All brands, Master Mowers
             </h2>
 
             <div className="mrfixCta__artWrap" aria-hidden="true">
