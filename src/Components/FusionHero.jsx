@@ -53,7 +53,7 @@ export default function FusionHero() {
             </div>
 
             <h2 className="fh-title">
-              Mower Repair Brisbane
+              Mower Repairs  Brisbane
               <br />
               Ride-on & Small Engine
               <br />
@@ -61,7 +61,7 @@ export default function FusionHero() {
             </h2>
 
             <p className="fh-subtitle">
-             Professional Brisbane lawn mower repairs, ride-on mower servicing, zero-turn mower repairs, and small engine diagnostics. We provide commercial mower maintenance, blade sharpening, carburetor cleaning, and quality refurbished mowers for sale in Brisbane with fast turnaround and reliable performance.
+             Professional Brisbane lawn mower repairs, ride-on mower servicing, zero-turn mower repairs, and small engine diagnostics. We provide commercial mower maintenance.
             </p>
 
             <div className="fh-ctaRow">
