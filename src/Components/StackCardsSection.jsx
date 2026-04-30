@@ -6,6 +6,7 @@ import mower2 from "../Assets/Images/mower2.webp";
 import Garageimg3 from "../Assets/Images/Garageimg3.webp";
 import mower3 from "../Assets/Images/mower3.webp";
 import Garageimg1 from "../Assets/Images/Garageimg1.webp";
+import garageimg from "../Assets/Images/newimages.jpeg"
 
 export default function Service2SectionInner() {
   const sectionRef = useRef(null);
@@ -32,7 +33,7 @@ export default function Service2SectionInner() {
     },
    
     {
-      img: Garageimg5,
+      img: garageimg,
       title: "Maintenance & Zero Turn Mowere Repairs Brisbane.",
       href: "/services/mower-maintenance-brisbane",
       desc:
@@ -44,20 +45,9 @@ export default function Service2SectionInner() {
         "Air Filter Replacement",
       ],
     },
-     {
-      img: mower2,
-      title: "Small Engine Repair Services",
-      href: "/services/small-engine-repair-brisbane",
-      desc:
-        "Brisbane small engine repair specialists providing carburetor cleaning, fuel system repairs, ignition diagnostics, starter motor repairs, chainsaw repairs, whipper snipper servicing, reliable mower engine repairs.",
-      bullets: [
-        "Small Engine Diagnostics",
-        "Starter Motor Repairs",
-        "Ignition System Repairs",
-      ],
-    },
+    
     {
-      img: mower3,
+      img: Garageimg5 ,
       title: "Whipper Snipper & Line Trimmer Repair Brisbane",
       href: "/services/garden-equipment-repair-brisbane",
       desc:
@@ -82,6 +72,18 @@ export default function Service2SectionInner() {
         "Engine Parts & Accessories",
         "Refurbished Mowers",
         "Spare Parts Supply",
+      ],
+    },
+     {
+      img: mower2,
+      title: "Small Engine Repair Services",
+      href: "/services/small-engine-repair-brisbane",
+      desc:
+        "Brisbane small engine repair specialists providing carburetor cleaning, fuel system repairs, ignition diagnostics, starter motor repairs, chainsaw repairs, whipper snipper servicing, reliable mower engine repairs.",
+      bullets: [
+        "Small Engine Diagnostics",
+        "Starter Motor Repairs",
+        "Ignition System Repairs",
       ],
     },
   ];
