@@ -18,7 +18,7 @@ export default function Home() {
     <>
       <Seo
         title="Mower Repairs Brisbane | Ride-on & small engine | Master Mowers"
-        description="Brisbane trusted mower repair specialists. Ride-on, push, zero-turn & small engine servicve. Pick-up and delivery available call for a quote today"
+        description="Brisbane trusted mower repair specialists. Ride-on, push, zero-turn & small engine servicve. Pick-up and delivery available call for a quote."
       />
       <Navbar />
       <FusionHero />

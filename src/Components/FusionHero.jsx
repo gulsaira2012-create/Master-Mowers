@@ -53,11 +53,10 @@ export default function FusionHero() {
             </div>
 
             <h2 className="fh-title">
-              Brisbane's Trusted Mower 
+              Brisbane's Trusted Mower Repair
               <br />
-              Repair & small engine 
-              <br />
-              Specialists
+               & small engine Specialists
+              
             </h2>
 
             <p className="fh-subtitle">
