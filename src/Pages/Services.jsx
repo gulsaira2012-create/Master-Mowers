@@ -14,8 +14,8 @@ export default function ContactInfo(){
     return(
         <>
             <Seo
-            title="Mower Repair & Servicing Brisbane | Master Mowers"
-            description="Expert lawn mower repair, small engine diagnostics, servicing, blade sharpening, and garden equipment repairs in Brisbane. Workshop-tested, reliable, and affordable."
+            title="Mower Services and Repair Brisbane | all brands| Master Mowers"
+            description="Full services & repair for all mower brands in Brisbane. Honda, Victa, Hasqvarna, Toro, John Deere, Cub Cadet, Ryobi, Stihl, Briggs & Stratton. Expert diagnostics, repairs, maintenance for all mower types. Book online."
             />
             <Navbar/>
             <MrFixBlogCta/>

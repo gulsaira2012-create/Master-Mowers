@@ -17,8 +17,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Master Mowers Brisbane"
-        description="Professional lawn mower and equipment repair specialists across Brisbane and Logan. Fast turnaround, honest pricing, servicing, tune-ups & quality second-hand mowers."
+        title="Mower Repairs Brisbane | Ride-on & small engine | Master Mowers"
+        description="Brisbane trusted mower repair specialists. Ride-on, push, zero-turn & small engine servicve. Pick-up and delivery available call for a quote today"
       />
       <Navbar />
       <FusionHero />

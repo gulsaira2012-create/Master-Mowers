@@ -30,8 +30,7 @@ export default function MrFixBlogCta() {
         <div className="mrfixCta__hero">
           <div className="mrfixCta__top">
             <h2 className="mrfixCta__title">
-              Mower Service & repairs Brisbane 
-              All brands, <br /> Master Mowers
+              Mower & small Engine Services  <br /> We Offer in Brisbane
             </h2>
 
             <div className="mrfixCta__artWrap" aria-hidden="true">

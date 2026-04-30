@@ -19,7 +19,7 @@ export default function Service2SectionInner() {
   const items = [
     {
       img: Garageimg1,
-      title: "lawn Mower Repair Specialist",
+      title: "Lawn Mower Repair & Servicing Brisbane",
       href: "/services/lawn-mower-repair-brisbane",
       desc:
         "Brisbane lawn mower repair specialists providing ride-on mower repairs, push mower servicing, zero-turn mower repairs, commercial mower maintenance, small engine diagnostics, blade sharpening, fast Brisbane repairs.",
@@ -30,7 +30,21 @@ export default function Service2SectionInner() {
         "Commercial Mower Repairs",
       ],
     },
+   
     {
+      img: Garageimg5,
+      title: "Maintenance & Zero Turn Mowere Repairs Brisbane.",
+      href: "/services/mower-maintenance-brisbane",
+      desc:
+        "Brisbane mower maintenance and tune-up services including oil changes, spark plug replacement, air filter cleaning, blade sharpening, belt adjustments, preventative servicing, seasonal lawn mower servicing.",
+      bullets: [
+        "Mower Servicing & Tune-Ups",
+        "Oil Change & Filter Replacement",
+        "Blade Sharpening & Balancing",
+        "Air Filter Replacement",
+      ],
+    },
+     {
       img: mower2,
       title: "Small Engine Repair Services",
       href: "/services/small-engine-repair-brisbane",
@@ -43,24 +57,11 @@ export default function Service2SectionInner() {
       ],
     },
     {
-      img: Garageimg5,
-      title: "Maintenance & Tune-Up Services",
-      href: "/services/mower-maintenance-brisbane",
-      desc:
-        "Brisbane mower maintenance and tune-up services including oil changes, spark plug replacement, air filter cleaning, blade sharpening, belt adjustments, preventative servicing, seasonal lawn mower servicing.",
-      bullets: [
-        "Mower Servicing & Tune-Ups",
-        "Oil Change & Filter Replacement",
-        "Blade Sharpening & Balancing",
-        "Air Filter Replacement",
-      ],
-    },
-    {
       img: mower3,
-      title: "Landscape Equipment Repairs",
+      title: "Whipper Snipper & Line Trimmer Repair Brisbane",
       href: "/services/garden-equipment-repair-brisbane",
       desc:
-        "Brisbane landscape equipment repairs for whipper snippers, hedge trimmers, chainsaws, leaf blowers, pressure washers, brush cutters and small engines. Fast diagnostics, carburetor repairs, blade sharpening, commercial equipment servicing, reliable Brisbane repair specialists.",
+        "Whipper Snipper & Line Trimmer Repair Brisbane experts providing fast, reliable servicing for all brands and models. Our Whipper Snipper & Line Trimmer Repair Brisbane service includes diagnostics, engine tuning, line feed repairs, and full maintenance to keep your equipment running like new. Trust our professional Whipper Snipper & Line Trimmer Repair Brisbane team for quality workmanship and quick turnaround across Brisbane.",
       bullets: [
         "Whipper Snipper Repairs",
         "Hedge Trimmer Repairs",

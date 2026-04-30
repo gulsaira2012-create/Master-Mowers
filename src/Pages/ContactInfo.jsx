@@ -14,7 +14,7 @@ export default function ContactInfo(){
     return(
         <>
             <Seo
-            title="Contact Master Mowers | Brisbane Lawn Mower Repairs"
+            title="Contact Master Mowers Brisbane | Call or Get a Quote."
             description="Contact Master Mowers for fast and reliable lawn mower and small engine repairs in Brisbane. Book a repair, request a quote, or speak with our team today."
             />
             <Navbar/>

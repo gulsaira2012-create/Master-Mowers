@@ -14,7 +14,7 @@ export default function ContactInfo(){
     return(
         <>
         <Seo
-                title="About Master Mowers"
+                title="About Master Mowers | Trusted Brisbane Mower mechanics"
                 description="Learn about Master Mowers, Brisbane’s trusted lawn mower and small engine repair specialists delivering reliable repairs, servicing, and honest advice across Brisbane and Logan."
               />
                 <Navbar/>
