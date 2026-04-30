@@ -7,6 +7,7 @@ import Garageimg3 from "../Assets/Images/Garageimg3.webp";
 import mower3 from "../Assets/Images/mower3.webp";
 import Garageimg1 from "../Assets/Images/Garageimg1.webp";
 import image from "../Assets/Images/newimage1.jpg"
+import garage from "../Assets/Images/garage.webp"
 
 export default function Service2SectionInner() {
   const sectionRef = useRef(null);
@@ -33,7 +34,7 @@ export default function Service2SectionInner() {
     },
    
     {
-      img: mower3 ,
+      img: garage ,
       title: "Maintenance & Zero Turn Mowere Repairs Brisbane.",
       href: "/services/mower-maintenance-brisbane",
       desc:
