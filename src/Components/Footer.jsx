@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
 
             <p className="mm-desc">
-              Master Mowers provides professional lawn mower repairs, small engine servicing, ride-on mower repairs, zero-turn mower repairs, and refurbished mower sales across Brisbane and surrounding suburbs.
+              <a href="../home" style={{ color: "#ffffff" }}>Master Mowers</a> provides professional lawn mower repairs, small engine servicing, ride-on mower repairs, zero-turn mower repairs, and refurbished mower sales across Brisbane and surrounding suburbs.
             </p>
 
             <div className="mm-social">

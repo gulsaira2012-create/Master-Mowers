@@ -6,8 +6,9 @@
 
 /* SECTION */
 .wcu{
+   width: 100%;
+  overflow-x: hidden;
   background: var(--cream);
-  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +20,8 @@
   width: 100%;
   max-width: 1200px;
   display: grid;
+    margin: 0 auto;
+  padding: 0 20px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   gap: 60px;

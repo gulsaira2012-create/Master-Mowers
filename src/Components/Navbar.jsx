@@ -77,7 +77,7 @@ export default function Navbar() {
             </NavLink>
 
             <a href="/contact" className="mm-cta">
-              Get a Quote <span className="mm-ctaArrow">›</span>
+              Call Now <span className="mm-ctaArrow">›</span>
             </a>
           </nav>
         </div>

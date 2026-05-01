@@ -39,7 +39,7 @@ export default function ServicesSection() {
               />
             </div>
             <div className="ss-body">
-              <h3>Lawn Mower Repair Specialists</h3>
+              <h3><a href="../services">Lawn Mower Repair Specialists</a></h3>
               <p>
                 Brisbane lawn mower repair specialists providing best services ever you want
               </p>
@@ -50,7 +50,7 @@ export default function ServicesSection() {
           {/* Center */}
           <div className="ss-highlight" >
             <div className="ss-highlightTop">
-              <h3>Small Engine Repair Services</h3>
+              <h3><a href="../services">Small Engine Repair Services</a></h3>
               <div className="ss-line" />
               <p>
                 Brisbane small engine repair specialists providing reliable mower engine repairs.
@@ -75,7 +75,7 @@ export default function ServicesSection() {
               />
             </div>
             <div className="ss-body">
-              <h3>Landscape Equipment Repairs</h3>
+              <h3><a href="../services">Landscape Equipment Repairs</a></h3>
               <p>
                 Brisbane landscape equipment repairs for chainsaws, hedge trimmers, blowers, whipper snippers, brush cutters.
               </p>

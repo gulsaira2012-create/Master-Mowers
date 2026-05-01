@@ -19,7 +19,7 @@ export default function AboutSection() {
           </h1>
 
           <p className="mm-hero-paragraph">
-            Master Mowers is a trusted Brisbane mower repair and small engine specialist delivering reliable repairs, servicing,
+            Master Mowers is a trusted Brisbane <a href="../services" style={{ color: "#023341" }}>mower repair</a> mower repair and small engine specialist delivering reliable repairs, servicing,
             and quality second-hand mower sales. We focus on honest advice, fast turnaround, and dependable workmanship for homeowners, landscapers, and commercial clients across Brisbane.
           </p>
 

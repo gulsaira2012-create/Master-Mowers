@@ -6,8 +6,9 @@ import mower2 from "../Assets/Images/mower2.webp";
 import Garageimg3 from "../Assets/Images/Garageimg3.webp";
 import mower3 from "../Assets/Images/mower3.webp";
 import Garageimg1 from "../Assets/Images/Garageimg1.webp";
-import image from "../Assets/Images/newimage1.jpg"
-import garage from "../Assets/Images/garage.webp"
+import mowerview from "../Assets/Images/mowerview.webp";
+import repairing from "../Assets/Images/repairingshop.webp";
+import smallengine from "../Assets/Images/smallengine.webp";
 
 export default function Service2SectionInner() {
   const sectionRef = useRef(null);
@@ -24,21 +25,21 @@ export default function Service2SectionInner() {
       title: "Lawn Mower Repair & Servicing Brisbane",
       href: "/services/lawn-mower-repair-brisbane",
       desc:
-        "Brisbane lawn mower repair specialists providing ride-on mower repairs, push mower servicing, zero-turn mower repairs, commercial mower maintenance, small engine diagnostics, blade sharpening, fast Brisbane repairs.",
+        "Lawn mower repair Brisbane and lawn mower servicing Brisbane for push mowers, ride on mowers, and zero turns. We provide mower service Brisbane, small engine repair Brisbane, blade sharpening, oil changes, and diagnostics. Trusted mower repair near me servicing Honda, Victa, and all major brands with fast turnaround and pickup options.",
       bullets: [
         "Ride-On Mower Repairs",
-        "Push / Walk-Behind Mower Repairs",
+        "Push Mower Repairs",
         "Zero-Turn Mower Repairs",
         "Commercial Mower Repairs",
       ],
     },
    
     {
-      img: garage ,
-      title: "Maintenance & Zero Turn Mowere Repairs Brisbane.",
+      img: mowerview,
+      title: "Maintenance & Zero Turn Mower Repairs Brisbane.",
       href: "/services/mower-maintenance-brisbane",
       desc:
-        "Brisbane mower maintenance and tune-up services including oil changes, spark plug replacement, air filter cleaning, blade sharpening, belt adjustments, preventative servicing, seasonal lawn mower servicing.",
+        "Zero turn mower repairs Brisbane and zero turn mower service Brisbane with expert mower maintenance Brisbane for residential and commercial machines. We handle ride on mower repairs Brisbane, zero turn servicing near me, blade sharpening, engine diagnostics, and full maintenance. Reliable mower repair Brisbane with fast turnaround, quality parts, and optional pickup and delivery across Brisbane.",
       bullets: [
         "Mower Servicing & Tune-Ups",
         "Oil Change & Filter Replacement",
@@ -62,7 +63,7 @@ export default function Service2SectionInner() {
       ],
     },
     {
-      img: Garageimg3,
+      img: repairing,
       title: "Mower Sales & Equipment Supply",
       href: "/services/mower-sales-brisbane",
       desc:
@@ -76,15 +77,16 @@ export default function Service2SectionInner() {
       ],
     },
      {
-      img: image,
+      img: smallengine,
       title: "Small Engine Repair Services",
       href: "/services/small-engine-repair-brisbane",
       desc:
-        "Brisbane small engine repair specialists providing carburetor cleaning, fuel system repairs, ignition diagnostics, starter motor repairs, chainsaw repairs, whipper snipper servicing, reliable mower engine repairs.",
+        "Small engine repair Brisbane including chainsaw repair Brisbane, whipper snipper repair Brisbane, line trimmer repair, leaf blower repair, and mower repair Brisbane. Servicing Honda, Victa, STIHL and more. Fast, reliable small engine service near you with pickup and delivery available.",
       bullets: [
         "Small Engine Diagnostics",
         "Starter Motor Repairs",
-        "Ignition System Repairs",
+        "Leaf blowers & garden vacuums",
+        "Chainsaws & hedge trimmers",
       ],
     },
   ];
