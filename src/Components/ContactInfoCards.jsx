@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../Assets/CSS/Components/ContactInfoCards.css";
+import telephoneIconSrc from "../Assets/Images/icons/telephone.png";
 export default function ContactInfoCards() {
   const [mounted, setMounted] = useState(false);
   const didRunRef = useRef(false);
@@ -38,14 +39,17 @@ export default function ContactInfoCards() {
           </a>
 
           {/* Center */}
-          <a href="#contact" className="cic-card cic-center" aria-label="Contact number">
+          <a href="tel:+61 456 496 787" className="cic-card cic-center" aria-label="Call Master Mowers">
             <div className="cic-iconBox cic-iconBox--light" aria-hidden="true">
               <HeadsetIcon />
             </div>
             <div className="cic-content">
               <h3 className="cic-h3 cic-h3--light">Contact number</h3>
               <p className="cic-p cic-p--light">
-                +61 456 496 787
+                <span className="cic-contactLine">
+                  <PhoneIcon />
+                  +61 456 496 787
+                </span>
                 <br />
                 mastermowersbris@gmail.com
               </p>
@@ -134,5 +138,13 @@ function ClockIcon() {
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <span className="cic-phoneIcon">
+      <img src={telephoneIconSrc} alt="" width="18" height="18" />
+    </span>
   );
 }

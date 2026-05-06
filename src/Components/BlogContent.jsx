@@ -5,6 +5,7 @@ import authorImg from "../Assets/Images/Logo.webp";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import tiktoikIcon from "../Assets/Images/icons/tik-tok.png";
+import telephoneIconSrc from "../Assets/Images/icons/telephone.png";
 import Seo from "./Seo";
 import { Link } from "react-router-dom";
 
@@ -173,7 +174,11 @@ export default function BlogContent() {
 
           <div className="ctaDetails">
             <span>📍 Meadowbrook, Brisbane Southside</span>
-            <span>📞 +61 456 496 787</span>
+            <span>
+              <PhoneIcon />
+              <a className="mm-contactLink" href="tel:+61 456 496 787"> +61 456 496 787</a>
+            </span>
+            {/* <span>📞 +61 456 496 787</span> */}
             <span>🌐 mastermowers.com.au</span>
           </div>
 
@@ -203,3 +208,9 @@ export default function BlogContent() {
     </>
   );
 }
+
+const PhoneIcon = () => (
+  <span>
+    <img src={telephoneIconSrc} alt="Telephone" width="18" height="18" />
+  </span>
+);

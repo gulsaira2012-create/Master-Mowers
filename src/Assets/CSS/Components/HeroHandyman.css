@@ -132,9 +132,23 @@
 }
 
 .hh-phone{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
   font-weight: 900;
   font-size: 22px;
   letter-spacing: .01em;
+  text-decoration: none;
+}
+
+.hh-phone:hover{
+  color: #fd5e02;
+}
+
+.hh-phoneIcon{
+  display: inline-flex;
+  align-items: center;
 }
 
 /* RIGHT */

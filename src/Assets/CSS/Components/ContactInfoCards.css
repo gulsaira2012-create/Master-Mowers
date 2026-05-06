@@ -124,6 +124,17 @@
   color: rgba(252, 245, 227, 0.85);
 }
 
+.cic-contactLine {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cic-phoneIcon {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* ---------- START state: stacked (slight overlap) ---------- */
 .cic-left {
   transform: translate(-50%, -50%) translateX(-10px) translateY(8px) scale(0.96);

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Assets/CSS/Components/HeroHandyman.css";
 import mower4 from "../Assets/Images/mower4.webp";
+import telephoneIconSrc from "../Assets/Images/icons/telephone.png";
 
 export default function HeroHandyman() {
   const [mounted, setMounted] = useState(false);
@@ -47,7 +48,10 @@ export default function HeroHandyman() {
 
             <div className="hh-contactText">
               <div className="hh-contactLabel">Get a question about our services?</div>
-              <div className="hh-phone">+61 456 496 787</div>
+              <a className="hh-phone" href="tel:+61 456 496 787">
+                <PhoneIcon />
+                +61 456 496 787
+              </a>
             </div>
           </div>
         </div>
@@ -80,5 +84,13 @@ export default function HeroHandyman() {
         </div>
       </div>
     </section>
+  );
+}
+
+function PhoneIcon() {
+  return (
+    <span className="hh-phoneIcon" aria-hidden="true">
+      <img src={telephoneIconSrc} alt="" width="18" height="18" />
+    </span>
   );
 }
