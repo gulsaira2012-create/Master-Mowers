@@ -12,7 +12,7 @@ export default function ResourcesSection() {
       image: blogImage,
       tag: "Repair Tips",
       title: "Why Your Mower Won't Start - and How to Fix It Fast in Brisbane",
-      link: "/blog/five-signs-your-lawn-mower-needs-a-service",
+      link: "/blog/mower-wont-start-brisbane",
     },
 
     {
