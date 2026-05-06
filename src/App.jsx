@@ -26,7 +26,7 @@ export default function App() {
            <Route path="/services" element={<Services />} />
            <Route path="/blog" element={<Blog />} />
            <Route
-             path="/blog/five-signs-your-lawn-mower-needs-a-service"
+             path="/blog/mower-wont-start-brisbane"
              element={<BlogContent />}
            />
           <Route path="*" element={<Home />} />
