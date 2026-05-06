@@ -76,6 +76,10 @@ export default function Navbar() {
               Contact
             </NavLink>
 
+            <NavLink to="/blog" className="mm-link">
+              Blog
+            </NavLink>
+
             <a href="/contact" className="mm-cta">
               Call Now <span className="mm-ctaArrow">›</span>
             </a>
@@ -139,6 +143,14 @@ export default function Navbar() {
                   onClick={closeMobile}
                 >
                   <span>Contact</span>
+                </NavLink>
+ 
+                <NavLink
+                  to="/blog"
+                  className="mm-mobileLink"
+                  onClick={closeMobile}
+                >
+                  <span>Blog</span>
                 </NavLink>
 
                 <a

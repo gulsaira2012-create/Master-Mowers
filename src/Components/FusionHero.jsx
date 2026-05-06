@@ -5,21 +5,26 @@ import heroimg2 from "../Assets/Images/heroimg2.webp";
 import mowers1 from "../Assets/Images/mowers1.webp";
 import mowers2 from "../Assets/Images/mowers2.webp";
 import tools from "../Assets/Images/Tools.webp";
+import garage from "../Assets/Images/garage.webp";
 import { Link } from "react-router-dom";
+import rideon from "../Assets/Images/rideon.webp";
+import ridemower from "../Assets/Images/ridemower.webp";
+import smallengine from "../Assets/Images/smallengine.webp";
+import repairingshop from "../Assets/Images/repairingshop.webp";
 
 export default function FusionHero() {
   const colUp = [
     { src: heroimg1, h: 150 },
-    { src: heroimg2, h: 180 },
+    { src: repairingshop, h: 180 },
     { src: mowers1, h: 220 },
-    { src: mowers2, h: 170 },
+    { src: smallengine, h: 170 },
   ];
 
   const colDown = [
     { src: tools, h: 150 },
-    { src: "https://images.unsplash.com/photo-1671543565338-8b22a87b8359?q=80&w=1170&auto=format&fit=crop", h: 180 },
-    { src: "https://images.unsplash.com/photo-1518709414768-a88981a4515d?q=80&w=687&auto=format&fit=crop", h: 220 },
-    { src: "https://images.unsplash.com/photo-1748893790747-fc2646924cbe?q=80&w=1632&auto=format&fit=crop", h: 170 },
+    { src: rideon, h: 220 },
+    { src: garage, h: 180 },
+    { src: ridemower, h: 170 },
   ];
 
   return (
