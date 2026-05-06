@@ -45,7 +45,7 @@ export default function ContactInfoCards() {
             <div className="cic-content">
               <h3 className="cic-h3 cic-h3--light">Contact number</h3>
               <p className="cic-p cic-p--light">
-                0456496787
+                +61 456 496 787
                 <br />
                 mastermowersbris@gmail.com
               </p>

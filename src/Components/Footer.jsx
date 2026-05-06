@@ -59,7 +59,7 @@ export default function Footer() {
               <li><MapIcon />7 faculty Circut Meadowbrook QLD 4131</li>
               <li>
                 <PhoneIcon />
-                <a className="mm-contactLink" href="tel:+456496787">+456496787</a>
+                <a className="mm-contactLink" href="tel:+61 456 496 787">+61 456 496 787</a>
               </li>
               <li>
                 <MailIcon />

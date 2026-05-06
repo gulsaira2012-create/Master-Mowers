@@ -173,7 +173,7 @@ export default function BlogContent() {
 
           <div className="ctaDetails">
             <span>📍 Meadowbrook, Brisbane Southside</span>
-            <span>📞 0456 496 787</span>
+            <span>📞 +61 456 496 787</span>
             <span>🌐 mastermowers.com.au</span>
           </div>
 
