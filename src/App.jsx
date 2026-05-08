@@ -11,6 +11,7 @@ const AboutUs = lazy(() => import("./Pages/AboutUs"));
 const Services = lazy(() => import("./Pages/Services"));
 const Blog = lazy(() => import("./Pages/Blog"));
 const BlogContent = lazy(() => import("./Components/BlogContent"));
+const BlogContent2 = lazy(() => import("./Components/BlogContent2"));
 
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
            <Route
              path="/blog/mower-wont-start-brisbane"
              element={<BlogContent />}
+           />
+           <Route
+             path="/blog/ride-on-mower-repair-brisbane-cost"
+             element={<BlogContent2 />}
            />
           <Route path="*" element={<Home />} />
           </Routes>

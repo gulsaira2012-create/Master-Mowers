@@ -5,13 +5,13 @@ export default function BlogSection() {
   const sidePosts = [
     {
       tag: "Repair Tips",
-      time: "4 min read",
+      // time: "4 min read",
       title: "Why Your Mower Won't Start — and How to Fix It Fast in Brisbane",
     },
     {
-      tag: "Maintenance",
-      time: "5 min read",
-      title: "How Regular Mower Servicing Saves You Money.",
+      tag: "Repair Guide",
+      // time: "5 min read",
+      title: "Ride-On Mower Repair in Brisbane: What to Expect and How Much It Costs",
     },
   ];
 

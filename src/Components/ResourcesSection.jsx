@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import blogImage from "../Assets/Images/repairingshop.webp";
 import mower1 from "../Assets/Images/mower1.webp";
 // Later, add these back when you need more cards:
-import mower2 from "../Assets/Images/mower2.webp";
+import rideon from "../Assets/Images/rideon.webp";
 // import mower3 from "../Assets/Images/mower3.webp";
 
 export default function ResourcesSection() {
@@ -16,10 +16,10 @@ export default function ResourcesSection() {
     },
 
     {
-      image: mower2,
-      tag: "Maintenance",
-      title: "How Regular Servicing Keeps Your Mower Running Longer",
-      link: "/blog",
+      image: rideon,
+      tag: "Repair Guide",
+      title: "Ride-On Mower Repair in Brisbane: What to Expect and How Much It Costs",
+     link: "/blog/ride-on-mower-repair-brisbane-cost",
     },
     // {
     //   image: mower3,
