@@ -281,9 +281,9 @@ export default function BlogContent2() {
               <span>📍 7 Faculty Circuit, Meadowbrook QLD 4131</span>
               <span>
                 <PhoneIcon />
-                <a className="mm-contactLink" href="tel:+61456496787">
+                <a className="mm-contactLink" href="tel:+61423059481">
                   {" "}
-                  +61 456 496 787
+                  +61 423059481
                 </a>
               </span>
               <span>🌐 mastermowers.com.au</span>

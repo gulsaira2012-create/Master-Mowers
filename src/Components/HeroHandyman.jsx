@@ -48,9 +48,9 @@ export default function HeroHandyman() {
 
             <div className="hh-contactText">
               <div className="hh-contactLabel">Get a question about our services?</div>
-              <a className="hh-phone" href="tel:+61 456 496 787">
+              <a className="hh-phone" href="tel:+61 423059481">
                 <PhoneIcon />
-                +61 456 496 787
+                +61 423059481
               </a>
             </div>
           </div>
