@@ -48,7 +48,7 @@ export default function ContactInfoCards() {
               <p className="cic-p cic-p--light">
                 <span className="cic-contactLine">
                   <PhoneIcon />
-                  +61 456 496 787
+                  +61 423 059 481
                 </span>
                 <br />
                 mastermowersbris@gmail.com
