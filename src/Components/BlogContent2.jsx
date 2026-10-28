@@ -80,7 +80,7 @@ export default function BlogContent2() {
     {
       question: "Can you pick up my ride-on mower for repair in Brisbane?",
       answer:
-        "Master Mowers is based in Meadowbrook and most customers bring their mowers directly to the workshop. If you cannot transport your ride-on mower, call 0456 496 787 to discuss possible options.",
+        "Master Mowers is based in Meadowbrook and most customers bring their mowers directly to the workshop. If you cannot transport your ride-on mower, call or text 0423 059 481 to discuss possible options.",
     },
   ];
 

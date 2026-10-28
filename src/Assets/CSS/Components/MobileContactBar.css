@@ -1,0 +1,52 @@
+/* MobileContactBar.css */
+.mcb {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .mcb {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* above page content, below the mobile menu overlay (2000+) */
+    z-index: 1500;
+    display: flex;
+    gap: 10px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--dark);
+    box-shadow: 0 -8px 24px rgba(2, 51, 65, 0.25);
+  }
+
+  .mcb-btn {
+    flex: 1;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 999px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .mcb-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .mcb-call {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .mcb-text {
+    background: var(--cream);
+    color: var(--dark);
+  }
+
+  /* bar is 72px tall (52 + 2×10 padding) — keep the footer clear of it */
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}

@@ -8,6 +8,7 @@
 }
 
 .fh-hero {
+  position: relative; /* anchors the hanging <OpenSign /> */
   width: 100%;
   background: var(--bg);
 }
@@ -24,6 +25,13 @@
   align-items: center;
   gap: 40px;
   padding: 36px 0;
+}
+
+/* phones: room at the top for the hanging <OpenSign /> tag */
+@media (max-width: 767.98px) {
+  .fh-grid {
+    padding-top: 96px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -139,6 +147,22 @@
   gap: 12px;
   cursor: pointer;
   padding: 6px 4px;
+}
+
+.fh-smsBtn {
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.fh-smsBtn:hover,
+.fh-smsBtn:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
 }
 
 .fh-playCircle {

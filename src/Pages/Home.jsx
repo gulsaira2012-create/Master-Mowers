@@ -2,6 +2,8 @@
 
 import Navbar from "../Components/Navbar";
 import FusionHero from "../Components/FusionHero";
+import QuoteForm from "../Components/QuoteForm";
+import PickupArea from "../Components/PickupArea";
 import About from "../Components/About";
 import WhyChooseUs  from "../Components/WhyChooseUs";
 import Services  from "../Components/Services";
@@ -22,12 +24,15 @@ export default function Home() {
       />
       <Navbar />
       <FusionHero />
+      
       <About />
       <Services/>
+      <PickupArea />
       <BrandMarquee/>
       <WhyChooseUs />
       {/* <AnimatedTestimonials /> */}
       <FAQ />
+      <QuoteForm />
       <FinanceHero/>
       <Footer />
     </>

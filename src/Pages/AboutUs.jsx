@@ -7,6 +7,7 @@ import FinanceHero from "../Components/FinanceHero";
 import WhyChooseUs  from "../Components/WhyChooseUs";
 // import AnimatedTestimonials from "../Components/AnimatedTestimonials";
 import AboutUsCards from "../Components/aboutusCards";
+import PickupArea from "../Components/PickupArea";
 import Seo from "../Components/Seo"
 
 
@@ -21,6 +22,7 @@ export default function ContactInfo(){
                 <HeroHandyman/>
                 <AboutUsCards />
                 <WhyChooseUs />
+                <PickupArea />
                 {/* <AnimatedTestimonials/> */}
                 <FinanceHero/>
                 <Footer/>

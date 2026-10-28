@@ -1,0 +1,243 @@
+/* OpenSign.css — hanging shop tag. Palette: --accent tag, --dark text,
+   --cream pin/string (all from App.css). */
+
+.os {
+  --amp: 6deg;
+  --tag-w: 130px;
+
+  position: absolute;
+  top: 0;
+  /* default (tablets, laptops, short desktops): just right of the hero pill,
+     on a short string so it clears the headline.
+     container offset + container padding (24) + .fh-left padding + pill (~260) + gap (24) */
+  --fh-left-pad: 26px;
+  --string-h: 6px;
+  left: calc(max(0px, (100vw - 1220px) / 2) + 24px + var(--fh-left-pad) + 284px);
+  z-index: 5;
+  display: block;
+  width: var(--tag-w);
+  text-decoration: none;
+  animation: os-drop 900ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* pin the string hangs from, sitting on the hero's top edge */
+.os-pin {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--cream);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* everything below the pin swings around the pin */
+.os-swing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: 50% 0;
+  animation: os-swing 3.6s ease-in-out 900ms infinite both;
+}
+
+.os-string {
+  width: 2px;
+  height: var(--string-h);
+  background: rgba(252, 245, 227, 0.6);
+}
+
+.os-tag {
+  position: relative;
+  width: 100%;
+  padding: 16px 10px 9px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: var(--dark);
+  text-align: center;
+  line-height: 1.15;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  transition: box-shadow 200ms ease;
+}
+
+/* hole punch where the string goes through */
+.os-hole {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin-left: -4.5px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.os-l1 {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.os-l2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.os-l3 {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* little "open now" light */
+.os-live {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  animation: os-pulse 1.8s ease-in-out infinite;
+}
+
+/* hover: bigger swing, bigger shadow */
+.os:hover {
+  --amp: 10deg;
+}
+
+.os:hover .os-tag,
+.os:focus-visible .os-tag {
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.38);
+}
+
+.os:focus-visible {
+  outline: none;
+}
+
+.os:focus-visible .os-tag {
+  outline: 3px solid var(--cream);
+  outline-offset: 3px;
+}
+
+@keyframes os-drop {
+  0% {
+    transform: translateY(-140%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes os-swing {
+  0%,
+  100% {
+    transform: rotate(calc(var(--amp) * -1));
+  }
+  50% {
+    transform: rotate(var(--amp));
+  }
+}
+
+@keyframes os-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .os {
+    --fh-left-pad: 40px;
+  }
+}
+
+/* big desktops have room above the hero content: top-left, longer string */
+@media (min-width: 1300px) and (min-height: 860px) {
+  .os {
+    --string-h: 34px;
+    left: 32px;
+  }
+
+  .os-tag {
+    padding: 20px 10px 12px;
+  }
+
+  .os-hole {
+    top: 7px;
+  }
+}
+
+/* phones: smaller tag on the top-right. fusionHero.css adds matching
+   top space above the pill so the tag never covers it. */
+@media (max-width: 767.98px) {
+  .os {
+    --tag-w: 100px;
+    --string-h: 16px;
+    left: auto;
+    right: 14px;
+  }
+
+  .os-tag {
+    padding: 16px 6px 9px;
+    border-radius: 12px;
+  }
+
+  .os-hole {
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+  }
+
+  .os-l1 {
+    font-size: 8px;
+  }
+
+  .os-l2 {
+    font-size: 11px;
+    gap: 4px;
+    margin-top: 3px;
+  }
+
+  .os-live {
+    width: 6px;
+    height: 6px;
+  }
+
+  .os-l3 {
+    font-size: 9px;
+    margin-top: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .os,
+  .os-swing,
+  .os-live {
+    animation: none;
+  }
+
+  .os-swing {
+    transform: rotate(-3deg);
+  }
+}

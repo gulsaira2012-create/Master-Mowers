@@ -5,6 +5,8 @@ import MrFixBlogCta from "../Components/MrFixBlogCta";
 import Footer from "../Components/Footer";
 import ContactInfoCards from "../Components/ContactInfoCards";
 // import ContactForm from "../Components/ContactForm";
+import QuoteForm from "../Components/QuoteForm";
+import FindUs from "../Components/FindUs";
 import FAQ from "../Components/FAQ";
 import FinanceHero from "../Components/FinanceHero";
 import Seo from "../Components/Seo"
@@ -21,6 +23,8 @@ export default function ContactInfo(){
             <MrFixBlogCta/>
             <ContactInfoCards/>
             {/* <ContactForm/> */}
+            <QuoteForm/>
+            <FindUs/>
             <FAQ/>
             <FinanceHero/>
             <Footer/>

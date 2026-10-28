@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Preloader from "./Components/preLoader";
+import MobileContactBar from "./Components/MobileContactBar";
 import "./App.css";
 
 /** Lazy pages */
@@ -38,6 +39,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </main>
+      <MobileContactBar />
     </Router>
   );
 }

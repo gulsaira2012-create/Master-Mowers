@@ -176,7 +176,7 @@ export default function BlogContent() {
             <span>📍 Meadowbrook, Brisbane Southside</span>
             <span>
               <PhoneIcon />
-              <a className="mm-contactLink" href="tel:+61 423059481"> +61 423059481</a>
+              <a className="mm-contactLink" href="tel:+61423059481"> +61 423059481</a>
             </span>
             <span>🌐 mastermowers.com.au</span>
           </div>

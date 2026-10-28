@@ -6,11 +6,12 @@ import mowers1 from "../Assets/Images/mowers1.webp";
 import mowers2 from "../Assets/Images/mowers2.webp";
 import tools from "../Assets/Images/Tools.webp";
 import garage from "../Assets/Images/garage.webp";
-import { Link } from "react-router-dom";
 import rideon from "../Assets/Images/rideon.webp";
 import ridemower from "../Assets/Images/ridemower.webp";
 import smallengine from "../Assets/Images/smallengine.webp";
 import repairingshop from "../Assets/Images/repairingshop.webp";
+import { PHOTO_SMS } from "./contactLinks";
+import OpenSign from "./OpenSign";
 
 export default function FusionHero() {
   const colUp = [
@@ -29,6 +30,7 @@ export default function FusionHero() {
 
   return (
     <section className="fh-hero">
+      <OpenSign />
       {/* ✅ ADDED CONTAINER HERE */}
         <div className="fh-container">
           <div className="fh-grid">
@@ -40,22 +42,22 @@ export default function FusionHero() {
                 <span className="fh-pillText">Your Mower’s Second Chance</span>
               </div>
 
-              <h2 className="fh-title">
-                Brisbane's Trusted Mower Repair
-                <br />
-                & small engine Specialists
-              </h2>
+              <h1 className="fh-title">
+                Mower repairs in Logan & Brisbane's southside free diagnosis, most jobs done in 1–3 days
+              </h1>
 
               <p className="fh-subtitle">
-                Professional Brisbane lawn mower repairs, ride-on mower servicing, zero-turn mower repairs, and small engine diagnostics. We provide commercial mower maintenance.
+                Push mowers, ride-ons, zero-turns, whipper snippers and chainsaws, all brands. A local workshop in Meadowbrook, open 7 days, with pickup and delivery. Rated 5.0 ★ from 20 Google reviews.
               </p>
 
               <div className="fh-ctaRow">
-                <Link to="/about">
-                  <button className="fh-primaryBtn">Get Started Now</button>
-                </Link>
+                <a href="tel:+61423059481" aria-label="Call Master Mowers on +61 423 059 481">
+                  <button className="fh-primaryBtn">Get a free quote</button>
+                </a>
 
-                <button className="fh-secondaryBtn"></button>
+                <a className="fh-secondaryBtn fh-smsBtn" href={PHOTO_SMS}>
+                  📷 Text us a photo of your mower
+                </a>
               </div>
             </div>
 
