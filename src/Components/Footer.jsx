@@ -63,13 +63,18 @@ export default function Footer() {
               </li>
               <li>
                 <MailIcon />
-                <a className="mm-contactLink" href="mailto:mastermowersbris@.com">mastermowersbris@gmail.com</a>
+                <a className="mm-contactLink" href="mailto:mastermowersbris@gmail.com">mastermowersbris@gmail.com</a>
               </li>
               <li className="mm-hours">
                 <ClockIcon />
                 <span>
-                  Open 7 Days a Week<br />
-                  9:00 AM – 9:00 PM
+                  Monday: 9:00 am – 6:00 pm<br />
+                  Tuesday: 9:00 am – 6:00 pm<br />
+                  Wednesday: 9:00 am – 6:00 pm<br />
+                  Thursday: 9:00 am – 6:00 pm<br />
+                  Friday: 9:00 am – 6:00 pm<br />
+                  Saturday: 9:00 am – 6:00 pm<br />
+                  Sunday: 9:00 am – 6:00 pm
                 </span>
               </li>
             </ul>

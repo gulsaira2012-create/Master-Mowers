@@ -181,7 +181,7 @@ export default function AnimatedTestimonials() {
 
           {/* optional small footer line inside the bordered card */}
           <div className="mmT-footnote">
-            Open 7 Days • 9:00 AM – 9:00 PM • Brisbane
+            Open 7 Days • 9:00 AM – 6:00 PM • Brisbane
           </div>
         </div>
       </div>

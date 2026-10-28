@@ -178,7 +178,6 @@ export default function BlogContent() {
               <PhoneIcon />
               <a className="mm-contactLink" href="tel:+61 423059481"> +61 423059481</a>
             </span>
-            {/* <span>📞 +61 456 496 787</span> */}
             <span>🌐 mastermowers.com.au</span>
           </div>
 

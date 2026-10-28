@@ -128,6 +128,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cic-contactLine:hover {
+  text-decoration: underline;
 }
 
 .cic-phoneIcon {

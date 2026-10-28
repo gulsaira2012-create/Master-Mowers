@@ -39,22 +39,24 @@ export default function ContactInfoCards() {
           </a>
 
           {/* Center */}
-          <a href="tel:+61 456 496 787" className="cic-card cic-center" aria-label="Call Master Mowers">
+          <div className="cic-card cic-center">
             <div className="cic-iconBox cic-iconBox--light" aria-hidden="true">
               <HeadsetIcon />
             </div>
             <div className="cic-content">
               <h3 className="cic-h3 cic-h3--light">Contact number</h3>
               <p className="cic-p cic-p--light">
-                <span className="cic-contactLine">
+                <a href="tel:+61423059481" className="cic-contactLine" aria-label="Call Master Mowers">
                   <PhoneIcon />
                   +61 423 059 481
-                </span>
+                </a>
                 <br />
-                mastermowersbris@gmail.com
+                <a href="mailto:mastermowersbris@gmail.com" className="cic-contactLine">
+                  mastermowersbris@gmail.com
+                </a>
               </p>
             </div>
-          </a>
+          </div>
 
           {/* Right */}
           <a href="#hours" className="cic-card cic-right" aria-label="Opening hour">
@@ -64,9 +66,10 @@ export default function ContactInfoCards() {
             <div className="cic-content">
               <h3 className="cic-h3">Opening hour</h3>
               <p className="cic-p">
-                Monday - Saturday <br/> 9:00 am - 9:00 pm
+                Mon – Sat: 9:00 AM – 6:00 PM
               
               </p>
+              <br />
             </div>
           </a>
         </div>

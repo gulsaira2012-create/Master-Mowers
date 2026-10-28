@@ -80,7 +80,7 @@ export default function Navbar() {
               Blog
             </NavLink>
 
-            <a href="/contact" className="mm-cta">
+            <a href="tel:+61423059481" className="mm-cta" aria-label="Call Master Mowers on +61 423 059 481">
               Call Now <span className="mm-ctaArrow">›</span>
             </a>
           </nav>
