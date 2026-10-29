@@ -1,26 +1,27 @@
-/* OpenSign.css — hanging shop tag. Palette: --accent tag, --dark text,
-   --cream pin/string (all from App.css). */
+/* OpenSign.css — hanging shop tag, fixed under the sticky header so it stays
+   while scrolling, flipping between two faces. Palette: --accent tag,
+   --dark text, --cream pin/string (all from App.css). */
 
 .os {
   --amp: 6deg;
   --tag-w: 130px;
 
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: var(--os-top, 66px); /* header height, set by OpenSign.jsx */
   /* default (tablets, laptops, short desktops): just right of the hero pill,
      on a short string so it clears the headline.
      container offset + container padding (24) + .fh-left padding + pill (~260) + gap (24) */
   --fh-left-pad: 26px;
   --string-h: 6px;
   left: calc(max(0px, (100vw - 1220px) / 2) + 24px + var(--fh-left-pad) + 284px);
-  z-index: 5;
+  z-index: 900; /* over page content, under the header (1000) */
   display: block;
   width: var(--tag-w);
   text-decoration: none;
   animation: os-drop 900ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-/* pin the string hangs from, sitting on the hero's top edge */
+/* pin the string hangs from, sitting on the header's bottom edge */
 .os-pin {
   position: absolute;
   top: -4px;
@@ -46,12 +47,25 @@
 .os-string {
   width: 2px;
   height: var(--string-h);
-  background: rgba(252, 245, 227, 0.6);
+  /* grey shows on both the teal hero and the cream sections it floats over */
+  background: var(--gray-color);
 }
 
 .os-tag {
-  position: relative;
   width: 100%;
+  perspective: 600px;
+}
+
+/* card that turns over every 4s: front 0–44%, back 50–94% of an 8s loop */
+.os-flip {
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  animation: os-flip 8s ease-in-out 900ms infinite;
+}
+
+.os-face {
+  display: block;
   padding: 16px 10px 9px;
   border-radius: 14px;
   background: var(--accent);
@@ -59,7 +73,15 @@
   text-align: center;
   line-height: 1.15;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transition: box-shadow 200ms ease;
+}
+
+.os-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
 }
 
 /* hole punch where the string goes through */
@@ -117,8 +139,8 @@
   --amp: 10deg;
 }
 
-.os:hover .os-tag,
-.os:focus-visible .os-tag {
+.os:hover .os-face,
+.os:focus-visible .os-face {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.38);
 }
 
@@ -126,7 +148,7 @@
   outline: none;
 }
 
-.os:focus-visible .os-tag {
+.os:focus-visible .os-face {
   outline: 3px solid var(--cream);
   outline-offset: 3px;
 }
@@ -155,6 +177,20 @@
   }
 }
 
+@keyframes os-flip {
+  0%,
+  44% {
+    transform: rotateY(0deg);
+  }
+  50%,
+  94% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
 @keyframes os-pulse {
   0%,
   100% {
@@ -178,7 +214,7 @@
     left: 32px;
   }
 
-  .os-tag {
+  .os-face {
     padding: 20px 10px 12px;
   }
 
@@ -197,7 +233,7 @@
     right: 14px;
   }
 
-  .os-tag {
+  .os-face {
     padding: 16px 6px 9px;
     border-radius: 12px;
   }
@@ -231,8 +267,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /* no swing or flip: the front face just shows, still */
   .os,
   .os-swing,
+  .os-flip,
   .os-live {
     animation: none;
   }
