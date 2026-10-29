@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <!-- Netlify registers forms from static HTML at deploy time, and <QuoteForm />
+         POSTs its submissions here. Keep these field names in sync with QuoteForm.jsx. -->
+    <form name="quote" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="tel" name="phone" />
+      <input type="text" name="suburb" />
+      <input type="text" name="machine" />
+      <input type="text" name="brand" />
+      <textarea name="problem"></textarea>
+      <input type="file" name="photo" />
+      <input type="text" name="pickup" />
+    </form>
+  </body>
+</html>

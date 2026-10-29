@@ -8,19 +8,6 @@
     <!-- <title>Vite + React</title> -->
   </head>
   <body>
-    <!-- Netlify only detects forms that exist in the deployed HTML, so this hidden
-         copy registers the React <QuoteForm /> fields. Keep the names in sync. -->
-    <form name="quote" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
-      <input type="text" name="bot-field" />
-      <input type="text" name="name" />
-      <input type="tel" name="phone" />
-      <input type="text" name="suburb" />
-      <input type="text" name="machine" />
-      <input type="text" name="brand" />
-      <textarea name="problem"></textarea>
-      <input type="file" name="photo" />
-      <input type="text" name="pickup" />
-    </form>
     <div id="root"></div>
     <script type="module" src="./src/main.jsx"></script>
   </body>

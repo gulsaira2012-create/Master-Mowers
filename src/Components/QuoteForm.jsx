@@ -134,8 +134,10 @@ export default function QuoteForm() {
         data.append("photo", small, small.name);
       }
 
+      // Post to the static form file (public/__forms.html), not "/", so the
+      // SPA catch-all in _redirects can't swallow the submission.
       // No Content-Type header: the browser sets the multipart boundary itself.
-      const res = await fetch("/", { method: "POST", body: data });
+      const res = await fetch("/__forms.html", { method: "POST", body: data });
       if (!res.ok) throw new Error(`Form submit failed: ${res.status}`);
       setStatus("sent");
     } catch (err) {
